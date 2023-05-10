@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #main {
+            padding: 10vh;
+            /* background-color: #dff5bb3e; */
+            text-align: center;
+            border-radius: 10px;
+        }
+        #main .p{
+            font-size: 30px;
+            margin-bottom: 60px;
+            line-height: 1.5;
+            font-weight: 500;
+            color: #000000;
+
+        }
+        #main a {
+            font-size: 26px;
+            text-decoration: none;
+            color: #fff;
+            /* border: 1px solid #000000; */
+            background-color: #000000;
+            padding: 20px 62px;
+            border-radius: 10px;
+            font-weight: lighter;
+            
+        }
+    </style>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- SCRIPT -->
+    <script defer src="assets/js/common.js"></script>
+    
+</head>
+<body class="gray">
+    
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner container">
+            <div class="left">
+                <a href="#" class="star">
+                    <span class="blind">메인으로</span>
+                </a>
+            </div>
+            <h1 class="logo">
+                <a href="main.html"></a> Developer Blog</h1>
+            <div class="right">
+                <ul> 
+                    <li><a href="join.html">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="nav__inner">
+            <ul>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">게시판</a></li>
+                <li><a href="#">블로그</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main" class="container">
+        <div class="intro__inner center">
+            <picture class="intro__images">
+                <source srcset="assets/img/joinEnd01.png, assets/img/joinEnd01.png 2x, assets/img/joinEnd01.png 3x" />
+                <img src="assets/img/joinEnd01.png" alt="회원가입 이미지">
+            </picture>
+            <p class="intro__text">
+            </p>
+        </div>
+        <!-- //intro__inner -->
+        <div class="join__inner container">
+            <h2>회원가입 완료 🙌🏻❤</h2>
+            <div class="index">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li class="active">3</li>
+                </ul>
+            </div>
+            <div class="join__form">
+
+                <div class="join__Agree">
+                    <div class="p">
+                        회원가입이 완료되었습니다 ✨🎉<br>
+                        더욱더 다양한 서비스를 즐겨보세요 !
+                    </div>
+                    <a href="#">로그인</a>
+                    <a href="#">메인</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer ">
+        <div class="footer__inner btStyle mb100 container">
+            <div>CopyRight 2024 youna</div>
+            <div>Blog by yuna</div>
+        </div>
+    </footer>
+    <!-- //footer -->
+</body>
+</html>
