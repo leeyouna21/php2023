@@ -1,26 +1,3 @@
-<?php
-    include "../connect/connect.php";
-
-    $youEmail = $_POST['youEmail'];
-    $youID = $_POST['youID'];
-    $youName = $_POST['youName'];
-    $youNick = $_POST['youNick'];
-    $youPass = $_POST['youPass'];
-    $youPassC = $_POST['youPassC'];
-    $youPhone = $_POST['youPhone'];
-    $youAge = $_POST['youAge'];
-    $youSex = $_POST['youGender'];
-    $regTime = time();
-
-    // echo $youEmail,$youID,$youName,$youPass,$youPhone,$youAge,$youSex;
-
-    $sql = "INSERT INTO member(youEmail, youNick, youID, youName, youPass, youPhone,youAge, youSex,regTime) VALUES('$youEmail','$youNick','$youID', '$youName', '$youPass', '$youPhone', '$youAge', '$youSex','$regTime')";
-    $connect -> query($sql);
-
-    // 사용자가 데이터 입력 -> 유효성 검사 -> 통과 -> 회원가입(쿼리문전송)
-    // 사용자가 데이터 입력 -> 유효성 검사 -> 통과(이메일주소/핸드폰)(O) -> 회원가입(쿼리문전송)
-    // 사용자가 데이터 입력 -> 유효성 검사 -> 통과(X) -> 회원가입(쿼리문전송)
-?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -45,7 +22,7 @@
         }
         #wrap {
             width: 100%;
-            padding-top: 5%;
+            padding-top: 10%;
         }
         .container {
             width: 800px;;
@@ -63,6 +40,11 @@
         }
         .logo img {
             width: 220px;
+        }
+        #main {
+            width: 500px;
+            height: 300px;
+            
         }
         #main .h1 {
             font-size:40px;
@@ -101,11 +83,11 @@
         <div class="container">
             <main id="main">
                 <div class="logo"><img src="../../assets/img/logo.png" alt=""></div>
-                <div class="h1">회원가입 완료</div>
-                <div class="p">온리포유 회원이 되신 것을 환영합니다.<br>
-                    로그인 후 편리하고 안전하게 서비스를 이용할수 있습니다.
+                <div class="h1">로그인 실패</div>
+                <div class="p">아이디나 비밀번호가 일치하지 않습니다.<br>
+                    다시 확인해 주시기 바랍니다.
                 </div>
-                <a href="../login/login.php">로그인 화면으로</a>
+                <a href="../login/login.html">로그인 화면으로</a>
             </main>
         </div>
     </div>

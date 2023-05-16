@@ -1,3 +1,10 @@
+<?php
+    include "../connect/connect.php";
+    include "../connect/session.php";
+
+    
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,23 +21,20 @@
     <main id="main" class="container ">
         <div class="login_inner">
             <div class="banner"><img src="../../assets/img/logo.png" alt="배너이미지"></div>
-            <p>비밀번호를 찾기 위한 정보를 입력해 주세요</p>
+            <p>아이디를 찾기 위한 정보를 입력해주세요</p>
             <div class="login_form">
-                <form action="#" name="#" method="post">
+                <form action="loginfindResult.php" name="loginfind" method="post">
                     <fieldset>
                         <legend class="blind">아이디 찾기</legend>
                         <div>
-                            <label for="youPass">새 비밀번호</label>
-                            <input type="email" id="youEmail" name="youEmail"placeholder="비밀번호를 입력해 주세요" required>
+                            <label for="youName">이름</label>
+                            <input type="text" id="youName" name="youName" class="inputStyle"   placeholder="이름" required>
                         </div>
                         <div>
-                            <label for="youPass">새 비밀번호 확인</label>
-                            <div class="code_inner">
-                                <input type="email" id="youcode" name="youcode" placeholder="비밀번호를 입력해 주세요" required>
-                                <a href="#">확인</a >
-                            </div>
+                            <label for="youEmail">이메일</label>
+                            <input type="email" id="youEmail" name="youEmail" class="inputStyle" placeholder="이메일" required>
                         </div>
-                        <button type="submit" class="button">로그인하러 가기</button>
+                        <button type="submit" class="button">아이디 찾기</button>
                     </fieldset>
                 </form>
             </div>

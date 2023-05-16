@@ -1,5 +1,4 @@
-
-<?php 
+<?php
     $host = "localhost";
     $user = "root";
     $pw = "root";
@@ -8,8 +7,8 @@
     $connect -> set_charset("utf-8");
 
     if(mysqli_connect_errno()){
-        echo  "Database Connect false";
+        echo "Database Connect false";
     } else {
-        echo "Database Connect True";
-    }
+        // echo "Database Connect True";
+    };
 ?>
