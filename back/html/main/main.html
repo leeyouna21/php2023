@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    
 
     <title>Only For You</title>
 
     <style>
+        @import url('https://webfontworld.github.io/recia/ReciaSerifDisplay.css');
+
         /* main */
         #main {
             margin-top: 100px;
-            margin-bottom: 200px;
+            /* margin-bottom: 100px; */
             font-family: 'SBAggro';
         }
         #main .swiper {
@@ -129,6 +132,338 @@
             padding-bottom: 25px;
         }
         /* //main */
+
+        /* 6개의 박스 시작 */
+        .reason {
+            background-color: #FFD2B8;
+            width: 100%;
+            height: 1900px;
+            /* margin-bottom: 200px; */
+        }
+        .lefttext_slide {
+            width: 100%;
+            height: 100px;
+            background-color: #FFAD7F;
+        }
+        .reason__main {
+            width: 100%;
+            height: 500px;
+        }
+        .reason__inner1 {
+            width: 1260px;
+            height: 500px;
+            /* background-color: #000; */
+            margin: 0 auto;
+        }
+        .reason__main .reason__inner1 {
+            width: 1260px;
+        }
+        .reason__main .reason__inner1 h1 {
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 60px;
+            padding-bottom: 30px;
+        }
+        /* .righttext_slide {
+            width: 100%;
+            height: 100px;
+            background-color: #FFAD7F;
+        } */
+        .reason__inner1 .c1{
+            width: 840px;
+            height: 175px;
+            background-color: #FFDBDB;
+            border-radius: 20px;
+            position: relative;
+            background-position:left;
+            margin-bottom: 60px;
+        }
+        .reason__inner1 .c1::before {
+            background-image: url(../../assets/img/reason01.png);
+            content: '';
+            position: absolute;
+            left: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 80px;
+            height: 80px;
+            background-repeat : no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .reason__inner1 .c1 h2 {
+            font-size: 30px;
+            font-weight: bold;
+            padding-left: 150px;
+            padding-top: 30px;
+        }
+        .reason__inner1 .c1 p {
+            font-size: 25px;
+            font-weight: normal;
+            padding-left: 150px;
+            padding-top: 10px;
+        }
+        .reason__inner1 .c2{
+            width: 840px;
+            height: 175px;
+            background-color: #FFDBDB;
+            border-radius: 20px;
+            position: relative;
+            background-position:left;
+            margin-bottom: 60px;
+            float: right;
+        }
+        .reason__inner1 .c2::before {
+            background-image: url(../../assets/img/reason02.png);
+            content: '';
+            position: absolute;
+            left: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 80px;
+            height: 80px;
+            background-repeat : no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .reason__inner1 .c2 h2 {
+            font-size: 30px;
+            font-weight: bold;
+            padding-left: 150px;
+            padding-top: 30px;
+        }
+        .reason__inner1 .c2 p {
+            font-size: 25px;
+            font-weight: normal;
+            padding-left: 150px;
+            padding-top: 10px;
+        }
+        .reason__inner1 .c3{
+            width: 840px;
+            height: 175px;
+            background-color: #FFDBDB;
+            border-radius: 20px;
+            position: relative;
+            background-position:left;
+            margin-bottom: 50px;
+            float: left;
+        }
+        .reason__inner1 .c3::before {
+            background-image: url(../../assets/img/reason03.png);
+            content: '';
+            position: absolute;
+            left: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 80px;
+            height: 80px;
+            background-repeat : no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .reason__inner1 .c3 h2 {
+            font-size: 30px;
+            font-weight: bold;
+            padding-left: 150px;
+            padding-top: 30px;
+        }
+        .reason__inner1 .c3 p {
+            font-size: 25px;
+            font-weight: normal;
+            padding-left: 150px;
+            padding-top: 10px;
+        }
+        .reason__inner2 {
+            width: 1260px;
+            height: 500px;
+            /* background-color: #000; */
+            margin: 0 auto;
+        }
+        .reason__main .reason__inner2 {
+            width: 1260px;
+        }
+        .reason__main .reason__inner2 h1 {
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 400px;
+            padding-bottom: 50px;
+        }
+        /* .righttext_slide {
+            width: 100%;
+            height: 100px;
+            background-color: #FFAD7F;
+        } */
+        .reason__inner2 .c4{
+            width: 840px;
+            height: 175px;
+            background-color: #FFDBDB;
+            border-radius: 20px;
+            position: relative;
+            background-position:left;
+            margin-bottom: 60px;
+            float: right;
+        }
+        .reason__inner2 .c4::before {
+            content: '';
+            position: absolute;
+            left: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 80px;
+            height: 80px;
+            background-image: url(../../assets/img/reason04.png);
+            background-repeat : no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .reason__inner2 .c4 h2 {
+            font-size: 30px;
+            font-weight: bold;
+            padding-left: 150px;
+            padding-top: 30px;
+        }
+        .reason__inner2 .c4 p {
+            font-size: 25px;
+            font-weight: normal;
+            padding-left: 150px;
+            padding-top: 10px;
+        }
+        .reason__inner2 .c5{
+            width: 840px;
+            height: 175px;
+            background-color: #FFDBDB;
+            border-radius: 20px;
+            position: relative;
+            background-position:left;
+            margin-bottom: 60px;
+            float: left;
+        }
+        .reason__inner2 .c5::before {
+            background-image: url(../../assets/img/reason05.png);
+            content: '';
+            position: absolute;
+            left: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 80px;
+            height: 80px;
+            background-repeat : no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .reason__inner2 .c5 h2 {
+            font-size: 30px;
+            font-weight: bold;
+            padding-left: 150px;
+            padding-top: 30px;
+        }
+        .reason__inner2 .c5 p {
+            font-size: 25px;
+            font-weight: normal;
+            padding-left: 150px;
+            padding-top: 10px;
+        }
+        .reason__inner2 .c6{
+            width: 840px;
+            height: 175px;
+            background-color: #FFDBDB;
+            border-radius: 20px;
+            position: relative;
+            background-position:left;
+            margin-bottom: 50px;
+            float: right;
+        }
+        .reason__inner2 .c6::before {
+            content: '';
+            position: absolute;
+            left: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 80px;
+            height: 80px;
+            background-image: url(../../assets/img/reason06.png);
+            background-repeat : no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .reason__inner2 .c6 h2 {
+            font-size: 30px;
+            font-weight: bold;
+            padding-left: 150px;
+            padding-top: 30px;
+        }
+        .reason__inner2 .c6 p {
+            font-size: 25px;
+            font-weight: normal;
+            padding-left: 150px;
+            padding-top: 10px;
+        }
+        /* 6개의 박스 끝 */
+
+        .righttext_slide {
+            width: 100%;
+            height: 100px;
+            background-color: #FFAD7F;
+        }
+        :root {
+            --size: clamp(10rem, 1rem + 40vmin, 30rem);
+            --gap: calc(var(--size) / 14);
+            --duration: 200s;
+            --scroll-start: 0;
+            --scroll-end: calc(-100% - var(--gap));
+        }
+        * {
+            box-sizing: border-box;
+        }
+            #typo {
+            display: grid;
+            align-content: center;
+            overflow: hidden;
+            gap: var(--gap);
+            width: 100%;
+            font-family: 'ReciaSerifDisplay', sans-serif;
+            font-size: 3rem;
+            font-style: italic;
+            font-weight: 300;
+            line-height: 1.2;
+            color: #000000;
+        }
+        .marquee {
+            width: 100vw;
+            display: flex;
+            overflow: hidden;
+        }
+        .marquee__group {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: var(--gap);
+            min-width: 100%;
+            -webkit-animation: scroll-x var(--duration) linear infinite;
+            animation: scroll-x var(--duration) linear infinite;
+            padding-top: 30px;
+        }
+        @keyframes scroll-x {
+        from {
+            transform: translateX(var(--scroll-start));
+        }
+        to {
+            transform: translateX(var(--scroll-end));
+        }
+        }
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap);
+            margin: auto;
+        } 
+
+        /* 애니메이션 css */
+        
+
     </style>
 </head>
 <body>
@@ -242,9 +577,96 @@
                         </a>
                     </div>
                 </div>
+                
+            </div>
+            
+        </div>
+        <div class="reason mt150">
+            <div class="lefttext_slide">
+                <article id="typo">
+                    <div class="wrapper">
+                        <div class="marquee">
+                            <div class="marquee__group">
+                                What you need now is ONLY FOR YOU    /
+                                What you need now is ONLY FOR YOU    /
+                                What you need now is ONLY FOR YOU    /
+                                What you need now is ONLY FOR YOU    /
+                                What you need now is ONLY FOR YOU    /
+                                What you need now is ONLY FOR YOU    /
+                                What you need now is ONLY FOR YOU    /
+                                What you need now is ONLY FOR YOU    /
+                                What you need now is ONLY FOR YOU    /
+                                What you need now is ONLY FOR YOU    /
+                                What you need now is ONLY FOR YOU    /
+                                What you need now is ONLY FOR YOU    /
+                                What you need now is ONLY FOR YOU    /
+                                What you need now is ONLY FOR YOU    /
+                                What you need now is ONLY FOR YOU    /
+                                What you need now is ONLY FOR YOU    /
+                                What you need now is ONLY FOR YOU    /
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="reason__main">
+                <div class="reason__inner1">
+                    <h1>영양제가 음식을 <span style="color: #FFAD7F;">대신할 수 없는 이유</span></h1>
+                    <div class="c1" >
+                        <h2>자연 비타민이 생체 이용률이 높다.</h2>
+                        <p>인체는 합성화학 물질을 잘 소화하지 못합니다. <br>천연 , 합성 비타민 E를 복용시킨 뒤 소변 검사를 하면 ,<br> 합성 비타민의 검출량이 훨씬 높습니다.</p>
+                    </div>
+                    <div class="c2" >
+                        <h2>화학성 분자 합성은 천연물질을 이길 수 없다.</h2>
+                        <p>화학적으로 분자를 합성했을 땐 비대칭성을 어떤 방법을 써도<br> 만들어 낼 수 없습니다.</p>
+                    </div>
+                    <div class="c3" >
+                        <h2>합성 비타민은 천연 비타민에 있는 보조인자가 없다.</h2>
+                        <p>비타민과 보조인자를 따로 먹는 것보다 식품을 온전히 농축해<br> 먹는 것이 영양학적으로도 식품 섭취의 효율성 측면에서도<br> 훨씬 좋습니다.</p>
+                    </div>
+                </div>
+                <div class="reason__inner2">
+                    <h1>영양제 의지는 NO! <span style="color: #FFAD7F;">건강한 음식을 먹어야 하는 이유</span></h1>
+                    <div class="c4" >
+                        <h2>영양소가 하는 일</h2>
+                        <p>에너지를 발생시키고 우리 몸을 구성하고 , 몸의 기능을 조절하는  중요한 역할을 합니다.</p>
+                    </div>
+                    <div class="c5" >
+                        <h2>부족하면 꼭 탈을 일으키는 부영양소.</h2>
+                        <p>만약 부영양소가 부족하다면 우리 몸은 즉각적으로 결핍 증세를<br> 나타내기 시작합니다.</p>
+                    </div>
+                    <div class="c6" >
+                        <h2>우리 몸에 중요한 비타민과 무기염류</h2>
+                        <p>무기염류와 비타민은 우리 몸의 여러가지 기능이 정상적으로 <br>돌아가는 데 반드시 필요한 물질입니다.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </main>
+        <div class="righttext_slide">
+            <article id="typo">
+                <div class="wrapper">
+                    <div class="marquee">
+                        <div class="marquee__group">
+                            What you need now is ONLY FOR YOU /
+                            What you need now is ONLY FOR YOU /
+                            What you need now is ONLY FOR YOU /
+                            What you need now is ONLY FOR YOU /
+                            What you need now is ONLY FOR YOU /
+                            What you need now is ONLY FOR YOU /
+                            What you need now is ONLY FOR YOU /
+                            What you need now is ONLY FOR YOU /
+                            What you need now is ONLY FOR YOU /
+                            What you need now is ONLY FOR YOU /
+                            What you need now is ONLY FOR YOU /
+                            What you need now is ONLY FOR YOU /
+                            What you need now is ONLY FOR YOU /
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div> 
+    </main> 
+    <!-- parallax__info -->
     <footer id="footer">
         <div class="container">
             <div class="footlogo">
@@ -323,5 +745,11 @@
             }
         }, 2500);
         </script> -->
-</body>
+
+    <script>
+
+
+    </script> 
+
+    </body>
 </html>
