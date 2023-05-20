@@ -8,6 +8,361 @@
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <title>Only For You</title>
+    <style>
+        #why_wrap {
+            width: 100%;
+            height: 1200px;
+            background-color: #E8E0D4;
+        }
+        .whycontainer {
+            width: 1260px;
+            height: 1080px;
+            margin: 0 auto;
+        }
+        .whyheader h1{
+            font-size: 40px;
+            font-weight: normal;
+            text-align: center;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .whymain {
+            width: 900px;
+            height: 700px;
+            background-color: #F4F0EA;
+            margin: 0 auto;
+        }
+        .whymain h3 {
+            font-size: 40px;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .whymain .c7 {
+            font-size: 150px;
+            font-weight: normal;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .whymain p {
+            font-size: 24px;
+            font-weight: lighter;
+            text-align: center;
+            padding-top: 60px;
+            padding-left: 20px;
+            padding-right: 20px;
+            line-height: 1.5;
+        }
+        #qwrap {
+            width: 100%;
+            height: 1700px;
+            background-color: #F4F0EA;
+        }
+        .qcontainer {
+            width: 1260px;
+            height: 1080px;
+            background-color: #F4F0EA;
+            margin: 0 auto;
+        }
+        .qheader h1{
+            font-size: 30px;
+            font-weight: lighter;
+            text-align: center;
+            padding-top: 60px;
+        }
+        .qmain {
+            width: 1260px;
+            height: 930px;
+            margin-top: 50px;
+            display: flex;
+        }
+        .qmain .qleft{
+            width: 630px;
+            height: 1020px;
+        }
+        .qmain .qleft .box1 {
+            width: 520px;
+            height: 250px;
+            margin-top: 60px;
+            border: 1px solid #000;
+            box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+            border-radius: 50px;
+            background-color: #799b131f;
+        }
+        .qmain .qleft .box1 .side{
+            font-size: 150px;
+            font-weight: bold;
+            position: relative;
+        }
+        .qmain .qleft .box1 .side::after {
+            content: "Q";
+            position: absolute;
+            top: -90px;
+            left: -30px;
+            padding: 0 5px;
+            font-family: Rebecca;
+            color: #789B13;
+        }
+        .qmain .qleft .box1 .header .h1{
+            width: 80px;
+            height: 50px;
+            border-radius: 20px;
+            background-color: #799b1376;
+            margin: 0 auto;
+            font-size: 25px;
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 10px;
+        }
+        .qmain .qleft .box1 .header p {
+            font-size: 15px;
+            font-weight: lighter;
+            color: #848484;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .qmain .qleft .box1 .main p{
+            font-size: 13px;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .qmain .qleft .box2 {
+            width: 520px;
+            height: 250px;
+            margin-top: 150px;
+            border: 1px solid #000;
+            box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+            border-radius: 50px;
+            background-color: #799b131f;
+        }
+        .qmain .qleft .box2 .side{
+            font-size: 150px;
+            font-weight: bold;
+            position: relative;
+        }
+        .qmain .qleft .box2 .side::after {
+            content: "Q";
+            position: absolute;
+            top: -90px;
+            left: -30px;
+            padding: 0 5px;
+            font-family: Rebecca;
+            color: #789B13;
+        }
+        .qmain .qleft .box2 .header .h1{
+            width: 80px;
+            height: 50px;
+            border-radius: 20px;
+            background-color: #799b1376;
+            margin: 0 auto;
+            font-size: 25px;
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 10px;
+        }
+        .qmain .qleft .box2 .header p {
+            font-size: 15px;
+            font-weight: lighter;
+            color: #848484;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .qmain .qleft .box2 .main p{
+            font-size: 13px;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .qmain .qleft .box3 {
+            width: 520px;
+            height: 250px;
+            margin-top: 150px;
+            border: 1px solid #000;
+            box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+            border-radius: 50px;
+            background-color: #799b131f;
+        }
+        .qmain .qleft .box3 .side{
+            font-size: 150px;
+            font-weight: bold;
+            position: relative;
+        }
+        .qmain .qleft .box3 .side::after {
+            content: "Q";
+            position: absolute;
+            top: -90px;
+            left: -30px;
+            padding: 0 5px;
+            font-family: Rebecca;
+            color: #789B13;
+        }
+        .qmain .qleft .box3 .header .h1{
+            width: 80px;
+            height: 50px;
+            border-radius: 20px;
+            background-color: #799b1376;
+            margin: 0 auto;
+            font-size: 25px;
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 10px;
+        }
+        .qmain .qleft .box3 .header p {
+            font-size: 15px;
+            font-weight: lighter;
+            color: #848484;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .qmain .qleft .box3 .main p{
+            font-size: 13px;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .qmain .aright{
+            width: 630px;
+            height: 930px;
+        }
+        .qmain .aright .box4 {
+            width: 520px;
+            height: 250px;
+            margin-top: 200px;
+            border: 1px solid #000;
+            box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+            border-radius: 50px;
+            margin-left: 110px;
+            background-color: #e7ec603d;
+        }
+        .qmain .aright .box4 .side{
+            font-size: 150px;
+            font-weight: bold;
+            position: relative;
+        }
+        .qmain .aright .box4 .side::after {
+            content: "A";
+            position: absolute;
+            top: -90px;
+            left: -30px;
+            padding: 0 5px;
+            font-family: Rebecca;
+            color: #789B13;
+        }
+        .qmain .aright .box4 .header .h1{
+            width: 80px;
+            height: 50px;
+            border-radius: 20px;
+            background-color: #799b1376;
+            margin: 0 auto;
+            font-size: 25px;
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 10px;
+        }
+        .qmain .aright .box4 .header p {
+            font-size: 15px;
+            font-weight: lighter;
+            color: #848484;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .qmain .aright .box4 .main p{
+            font-size: 13px;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .qmain .aright .box5 {
+            width: 520px;
+            height: 250px;
+            margin-top: 200px;
+            border: 1px solid #000;
+            box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+            border-radius: 50px;
+            margin-left: 110px;
+            background-color: #e7ec603d;
+        }
+        .qmain .aright .box5 .side{
+            font-size: 150px;
+            font-weight: bold;
+            position: relative;
+        }
+        .qmain .aright .box5 .side::after {
+            content: "A";
+            position: absolute;
+            top: -90px;
+            left: -30px;
+            padding: 0 5px;
+            font-family: Rebecca;
+            color: #789B13;
+        }
+        .qmain .aright .box5 .header .h1{
+            width: 80px;
+            height: 50px;
+            border-radius: 20px;
+            background-color: #799b1376;
+            margin: 0 auto;
+            font-size: 25px;
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 10px;
+        }
+        .qmain .aright .box5 .header p {
+            font-size: 15px;
+            font-weight: lighter;
+            color: #848484;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .qmain .aright .box5 .main p{
+            font-size: 13px;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .qmain .aright .box6 {
+            width: 520px;
+            height: 250px;
+            margin-top: 200px;
+            border: 1px solid #000;
+            box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+            border-radius: 50px;
+            margin-left: 110px;
+            background-color: #e7ec603d;
+        }
+        .qmain .aright .box6 .side{
+            font-size: 150px;
+            font-weight: bold;
+            position: relative;
+        }
+        .qmain .aright .box6 .side::after {
+            content: "A";
+            position: absolute;
+            top: -90px;
+            left: -30px;
+            padding: 0 5px;
+            font-family: Rebecca;
+            color: #789B13;
+        }
+        .qmain .aright .box6 .header .h1{
+            width: 100px;
+            height: 50px;
+            border-radius: 20px;
+            background-color: #799b1376;
+            margin: 0 auto;
+            font-size: 25px;
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 10px;
+        }
+        .qmain .aright .box6 .header p {
+            font-size: 15px;
+            font-weight: lighter;
+            color: #848484;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .qmain .aright .box6 .main p{
+            font-size: 13px;
+            text-align: center;
+            padding-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header id="header">
@@ -208,6 +563,108 @@
                 </div>
             </article>
         </div> 
+        <div id="why_wrap">
+            <div class="whycontainer">
+                <div class="whyheader">
+                    <h1>온리포유 왜 필요한걸까요 ?</h1>
+                </div>
+                <div class="whymain">
+                    <h3>since</h3>
+                    <div class="reason__inner3">
+                        <div class="c7">
+                            2023
+                        </div>
+                    </div>
+                    <p>건강한 자는 모든 희망을 안고 , 희망을 가진 자는 모든 꿈을 이룬다는 말이 있듯이<br> 저희 온리포유는 여러분께 사라지지 않는 건강이야기를 들려드리고 , <br>나에게 필요한 맞춤 영양소와 건강한 음식으로 인한<br> 신체 건강 관리를 도와드리고 있습니다.</p>
+                </div>
+            </div>
+        </div>
+        <div id="qwrap">
+            <div class="qcontainer">
+                <div class="qheader">
+                    <h1>It's Q & A time 🍒</h1>
+                </div>
+                <div class="qmain">
+                    <div class="qleft">
+                        <div class="box1">
+                            <div class="side"></div>
+                            <div class="header">
+                                <div class="h1">#뼈</div>
+                                <p>40대 / 남 / W**님</p>
+                            </div>
+                            <div class="main">
+                                <p>Q. 뼈에 좋은 멸치는 뭐랑 먹으면 더 좋은 시너지가 생길까요 ?<br><br>
+                                    요즘 뼈 건강을 신경써야 돼서 , 온리포유를 통해 좋은 정보 많이 얻고 있습니다. <br>멸치를 자주 먹으려 하는데 멸치랑 또 뭘 챙겨먹으면 더 좋은 효과가 날 지 궁금합니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box2">
+                            <div class="side"></div>
+                            <div class="header">
+                                <div class="h1">#눈</div>
+                                <p>20대 / 여 / y**님</p>
+                            </div>
+                            <div class="main">
+                                <p>Q. 컴퓨터를 많이 보는 직업이라 눈 건강이 신경쓰여요.<br><br>
+                                    평소 컴퓨터를 오래 보는 직업이라 눈 건강에 특히 더 신경쓰고 있어요. <br>이럴 때 먹으면 도움이 될만한 좋은 음식들이 어떤 게 있을까요 ?
+                            </div>
+                        </div>
+                        <div class="box3">
+                            <div class="side"></div>
+                            <div class="header">
+                                <div class="h1">#뼈</div>
+                                <p>30대 / 여 / l**님</p>
+                            </div>
+                            <div class="main">
+                                <p>Q. 임신중인데 산모와 태아에게 좋은 음식을 더 알려주세요 !<br><br>
+                                    온리포유를 너무 잘 사용하는 임산부입니다. 임산부는 특히 음식에 더 신경을 써야해서<br> 선택의 폭이 넓지 않은데 , 태아와 산모에게 좋은 음식을 더 자세히 알고 싶어요! 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aright">
+                        <div class="box4">
+                            <div class="side"></div>
+                            <div class="header">
+                                <div class="h1">#뼈</div>
+                                <p>온리포유의 답변</p>
+                            </div>
+                            <div class="main">
+                                <p>A. 멸치와 함께 먹을 수 있는 좋은 음식을 추천해드리도록 하겠습니다.<br><br>
+                                    멸치와 함께 먹을 수 있는 좋은 음식으로는 다양한 채소와 함께 조리된<br> 요리, 스프, 볶음 등이 있습니다. 멸치와 채소를 함께 조리하면 식이섬유와 다른<br>필수 영양소를 함께 공급받을 수 있으며,더욱 건강한 식사를 할 수 있습니다. 💛
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box5">
+                            <div class="side"></div>
+                            <div class="header">
+                                <div class="h1">#눈</div>
+                                <p>온리포유의 답변</p>
+                            </div>
+                            <div class="main">
+                                <p>A. 컴퓨터를 오랫동안 사용하는 분에게 눈에 좋은 음식을 추천해드릴게요. <br><br>
+                                    달걀: 눈 건강에 중요한 영양소인 루테인과 제아잔틴이 풍부하게 포함되어 있습니다. <br>어류: 오메가-3 지방산을 함유한 물고기(연어, 참치 등)는 망막 건강을 촉진하고 <br>노화로 인한 시력 감소를 예방할 수 있습니다.규칙적인 안구 운동, <br>적절한 휴식, 적정한 조명과 안경 사용 등도 중요합니다. 💛
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box6">
+                            <div class="side"></div>
+                            <div class="header">
+                                <div class="h1">#임산부</div>
+                                <p>온리포유의 답변</p>
+                            </div>
+                            <div class="main">
+                                <p>A. 임산부와 태아에게 좋은 음식 추천 목록입니다!<br><br>
+
+                                    단백질: 닭고기, 양고기, 생선, 콩, 두부 등 고단백 식품은 태아의 성장과 발달에 필요한 <br>영양소입니다.
+                                    잎채소: 시금치, 케일, 상추 등의 잎채소에는 철분, 엽산, 비타민 C, 칼슘 등이 <br>풍부하게 들어있습니다.
+                                임신 중에는 음식 안전에도 주의해야 합니다. 익지 않은 고기, <br>날생선, 날씨 조건이 좋지 않은 해산물 등은 피하고, 식품 안전 지침을 준수해야 합니다.💛
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main> 
     <!-- parallax__info -->
     <footer id="footer">
@@ -329,6 +786,10 @@
 
             if(scrollTop > document.querySelector(".c6").offsetTop - window.innerHeight/2 ){
                 document.querySelector(".c6").classList.add("show");
+            }
+
+            if(scrollTop > document.querySelector(".c7").offsetTop - window.innerHeight/2 ){
+                document.querySelector(".c7").classList.add("show");
             }
 
             requestAnimationFrame(scroll);  //1초에 60번만 작동하게 하는 애니메이션

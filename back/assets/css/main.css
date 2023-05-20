@@ -1,5 +1,5 @@
 @import url('https://webfontworld.github.io/recia/ReciaSerifDisplay.css');
-
+@import url('https://webfontworld.github.io/Rebecca/Rebecca.css');
 /* main */
 #main {
     margin-top: 100px;
@@ -389,6 +389,12 @@
 }
 /* 6개의 박스 끝 */
 
+.reason__inner3 {
+
+    /* background-color: #000; */
+    margin: 0 auto;
+}
+
 .righttext_slide {
     width: 100%;
     height: 100px;
@@ -503,5 +509,12 @@ to {
     transition: all 1s;
 }
 .c6.show {
+    opacity: 1;
+} 
+.c7  {
+    opacity: 0;
+    transition: all 1s;
+}
+.c7.show {
     opacity: 1;
 } 
