@@ -453,6 +453,359 @@ to {
     gap: var(--gap);
     margin: auto;
 } 
+#why_wrap {
+    width: 100%;
+    height: 1200px;
+    background-color: #E8E0D4;
+}
+.whycontainer {
+    width: 1260px;
+    height: 1080px;
+    margin: 0 auto;
+}
+.whyheader h1{
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.whymain {
+    width: 900px;
+    height: 700px;
+    background-color: #F4F0EA;
+    margin: 0 auto;
+}
+.whymain h3 {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 50px;
+}
+.whymain .c7 {
+    font-size: 150px;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 50px;
+}
+.whymain p {
+    font-size: 24px;
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 1.5;
+}
+#qwrap {
+    width: 100%;
+    height: 1700px;
+    background-color: #F4F0EA;
+}
+.qcontainer {
+    width: 1260px;
+    height: 1080px;
+    background-color: #F4F0EA;
+    margin: 0 auto;
+}
+.qheader h1{
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 60px;
+}
+.qmain {
+    width: 1260px;
+    height: 930px;
+    margin-top: 50px;
+    display: flex;
+}
+.qmain .qleft{
+    width: 630px;
+    height: 1020px;
+}
+.qmain .qleft .box1 {
+    width: 520px;
+    height: 250px;
+    margin-top: 60px;
+    border: 1px solid #000;
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    background-color: #799b131f;
+}
+.qmain .qleft .box1 .side{
+    font-size: 150px;
+    font-weight: bold;
+    position: relative;
+}
+.qmain .qleft .box1 .side::after {
+    content: "Q";
+    position: absolute;
+    top: -90px;
+    left: -30px;
+    padding: 0 5px;
+    font-family: Rebecca;
+    color: #789B13;
+}
+.qmain .qleft .box1 .header .h1{
+    width: 80px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #799b1376;
+    margin: 0 auto;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+.qmain .qleft .box1 .header p {
+    font-size: 15px;
+    font-weight: lighter;
+    color: #848484;
+    text-align: center;
+    padding-top: 20px;
+}
+.qmain .qleft .box1 .main p{
+    font-size: 13px;
+    text-align: center;
+    padding-top: 20px;
+}
+.qmain .qleft .box2 {
+    width: 520px;
+    height: 250px;
+    margin-top: 150px;
+    border: 1px solid #000;
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    background-color: #799b131f;
+}
+.qmain .qleft .box2 .side{
+    font-size: 150px;
+    font-weight: bold;
+    position: relative;
+}
+.qmain .qleft .box2 .side::after {
+    content: "Q";
+    position: absolute;
+    top: -90px;
+    left: -30px;
+    padding: 0 5px;
+    font-family: Rebecca;
+    color: #789B13;
+}
+.qmain .qleft .box2 .header .h1{
+    width: 80px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #799b1376;
+    margin: 0 auto;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+.qmain .qleft .box2 .header p {
+    font-size: 15px;
+    font-weight: lighter;
+    color: #848484;
+    text-align: center;
+    padding-top: 20px;
+}
+.qmain .qleft .box2 .main p{
+    font-size: 13px;
+    text-align: center;
+    padding-top: 20px;
+}
+.qmain .qleft .box3 {
+    width: 520px;
+    height: 250px;
+    margin-top: 150px;
+    border: 1px solid #000;
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    background-color: #799b131f;
+}
+.qmain .qleft .box3 .side{
+    font-size: 150px;
+    font-weight: bold;
+    position: relative;
+}
+.qmain .qleft .box3 .side::after {
+    content: "Q";
+    position: absolute;
+    top: -90px;
+    left: -30px;
+    padding: 0 5px;
+    font-family: Rebecca;
+    color: #789B13;
+}
+.qmain .qleft .box3 .header .h1{
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #799b1376;
+    margin: 0 auto;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+.qmain .qleft .box3 .header p {
+    font-size: 15px;
+    font-weight: lighter;
+    color: #848484;
+    text-align: center;
+    padding-top: 20px;
+}
+.qmain .qleft .box3 .main p{
+    font-size: 13px;
+    text-align: center;
+    padding-top: 20px;
+}
+.qmain .aright{
+    width: 630px;
+    height: 930px;
+}
+.qmain .aright .box4 {
+    width: 520px;
+    height: 250px;
+    margin-top: 200px;
+    border: 1px solid #000;
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    margin-left: 110px;
+    background-color: #e7ec603d;
+}
+.qmain .aright .box4 .side{
+    font-size: 150px;
+    font-weight: bold;
+    position: relative;
+}
+.qmain .aright .box4 .side::after {
+    content: "A";
+    position: absolute;
+    top: -90px;
+    left: -30px;
+    padding: 0 5px;
+    font-family: Rebecca;
+    color: #789B13;
+}
+.qmain .aright .box4 .header .h1{
+    width: 80px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #799b1376;
+    margin: 0 auto;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+.qmain .aright .box4 .header p {
+    font-size: 15px;
+    font-weight: lighter;
+    color: #848484;
+    text-align: center;
+    padding-top: 20px;
+}
+.qmain .aright .box4 .main p{
+    font-size: 13px;
+    text-align: center;
+    padding-top: 20px;
+}
+.qmain .aright .box5 {
+    width: 520px;
+    height: 250px;
+    margin-top: 200px;
+    border: 1px solid #000;
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    margin-left: 110px;
+    background-color: #e7ec603d;
+}
+.qmain .aright .box5 .side{
+    font-size: 150px;
+    font-weight: bold;
+    position: relative;
+}
+.qmain .aright .box5 .side::after {
+    content: "A";
+    position: absolute;
+    top: -90px;
+    left: -30px;
+    padding: 0 5px;
+    font-family: Rebecca;
+    color: #789B13;
+}
+.qmain .aright .box5 .header .h1{
+    width: 80px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #799b1376;
+    margin: 0 auto;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+.qmain .aright .box5 .header p {
+    font-size: 15px;
+    font-weight: lighter;
+    color: #848484;
+    text-align: center;
+    padding-top: 20px;
+}
+.qmain .aright .box5 .main p{
+    font-size: 13px;
+    text-align: center;
+    padding-top: 20px;
+}
+.qmain .aright .box6 {
+    width: 520px;
+    height: 250px;
+    margin-top: 200px;
+    border: 1px solid #000;
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    margin-left: 110px;
+    background-color: #e7ec603d;
+}
+.qmain .aright .box6 .side{
+    font-size: 150px;
+    font-weight: bold;
+    position: relative;
+}
+.qmain .aright .box6 .side::after {
+    content: "A";
+    position: absolute;
+    top: -90px;
+    left: -30px;
+    padding: 0 5px;
+    font-family: Rebecca;
+    color: #789B13;
+}
+.qmain .aright .box6 .header .h1{
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #799b1376;
+    margin: 0 auto;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+.qmain .aright .box6 .header p {
+    font-size: 15px;
+    font-weight: lighter;
+    color: #848484;
+    text-align: center;
+    padding-top: 20px;
+}
+.qmain .aright .box6 .main p{
+    font-size: 13px;
+    text-align: center;
+    padding-top: 20px;
+}
 
 /* 애니메이션 css */
 /* .reason__header1  {
@@ -518,3 +871,45 @@ to {
 .c7.show {
     opacity: 1;
 } 
+.box1  {
+    opacity: 0;
+    transition: all 1s;
+}
+.box1.show {
+    opacity: 1;
+}
+.box2  {
+    opacity: 0;
+    transition: all 1s;
+}
+.box2.show {
+    opacity: 1;
+}  
+.box3  {
+    opacity: 0;
+    transition: all 1s;
+}
+.box3.show {
+    opacity: 1;
+}  
+.box4  {
+    opacity: 0;
+    transition: all 1s;
+}
+.box4.show {
+    opacity: 1;
+}  
+.box5  {
+    opacity: 0;
+    transition: all 1s;
+}
+.box5.show {
+    opacity: 1;
+}  
+.box6 {
+    opacity: 0;
+    transition: all 1s;
+}
+.box6.show {
+    opacity: 1;
+}  
