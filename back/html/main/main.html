@@ -8,7 +8,84 @@
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <title>Only For You</title>
+    <style>
+        #subscribe {
+            width: 100%;
+            height: 900px;
+            background-color: #E8E0D4;
+        }
+        .scontainer {
+            width: 1260px;
+            height: 900px;
+            margin: 0 auto;
+        }
+        .scontainer h1{
+            font-weight: normal;
+            font-size: 100px;
+            padding-top: 150px;
+            line-height: 1.5;
+            text-align: center;
+        }
+        .slider__inner img {
+        animation: rotation 4s infinite linear;
+        }
 
+        @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+        }
+
+        .slider__inner .heart-dynamic-color {
+        animation: heartbeat 1s infinite linear;
+        }
+
+        @keyframes heartbeat {
+        0% {
+            transform: scale(1);
+        }
+        25% {
+            transform: scale(1.05);
+        }
+        50% {
+            transform: scale(0.95);
+        }
+        75% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
+        }
+
+.slider__inner .gift-dynamic-color {
+    animation: heartbeat 1s infinite linear;
+        }
+
+        @keyframes heartbeat {
+        0% {
+            transform: scale(1);
+        }
+        25% {
+            transform: scale(1.05);
+        }
+        50% {
+            transform: scale(0.95);
+        }
+        75% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
+        }
+
+
+
+    </style>
 </head>
 <body>
     <header id="header">
@@ -27,20 +104,21 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide slider__inner s1">
                     <div class="container">
-                        <h2>내 몸을 위한,<br>나를 위한 앱<br>온리포유</h2>
-                        <img src="../../assets/img/slider04.svg" alt="배너이미지">
+                        <h2  style="color: #fff;">매일이 건강한 날! <br>온리포유와 함께<br> 시작해 보세요!</h2>
+                        <img src="../../assets/img/sun-dynamic-color.png" alt="배너이미지">
+
                     </div>
                 </div>
                 <div class="swiper-slide slider__inner s2">
                     <div class="container">
-                        <h2>요리법 공유하고<br>선물 받아가자 !</h2>
-                        <img src="../../assets/img/slider03.svg" alt="배너이미지">
+                        <h2 style="color: #e54b4bc0;">맛있는 나의 레시피 , <br>내 레시피를 세상과 <br>공유하고 선물 받아가세요 !</h2>
+                        <img src="../../assets/img/gift-dynamic-color.png" alt="배너이미지" class="gift-dynamic-color">
                     </div>
                 </div>
                 <div class="swiper-slide slider__inner s3">
                     <div class="container">
-                        <h2>각각의 개성있는<br>레시피 구경하기</h2>
-                        <img src="../../assets/img/slider05.svg" alt="배너이미지">
+                        <h2 style="color: #F9F8E6;">ONLY ONE SITE FOR THE BEST HEALTH , VISIT NOW !</h2>
+                        <img src="../../assets/img/heart-dynamic-color.svg" alt="배너이미지" class="heart-dynamic-color">
                     </div>
                 </div>
             </div>
@@ -155,7 +233,7 @@
             </div>
             <div class="reason__main">
                 <div class="reason__inner1">
-                    <h1>영양제가 음식을 <span style="color: #FFAD7F;">대신할 수 없는 이유 ?</span></h1>
+                    <h1>영양제가 음식을 <span style="color: #FFAD7F;">대신할 수 없는 이유는 뭘까 ?</span></h1>
                     <div class="c1 pulse" >
                         <h2>자연 비타민이 생체 이용률이 높다.</h2>
                         <p class="pulse" data-delay="1500" >인체는 합성화학 물질을 잘 소화하지 못합니다. <br>천연 , 합성 비타민 E를 복용시킨 뒤 소변 검사를 하면 ,<br> 합성 비타민의 검출량이 훨씬 높습니다.</p>
@@ -170,7 +248,7 @@
                     </div>
                 </div>
                 <div class="reason__inner2">
-                    <h1>영양제 의지는 NO! <span style="color: #FFAD7F;">건강한 음식을 먹어야 하는 이유 ?</span></h1>
+                    <h1>영양제 의지는 NO! <span style="color: #FFAD7F;">건강한 음식을 먹어야 하는 이유는 ?</span></h1>
                     <div class="c4" >
                         <h2>영양소가 하는 일</h2>
                         <p>에너지를 발생시키고 우리 몸을 구성하고 , 몸의 기능을 조절하는  중요한 역할을 합니다.</p>
@@ -221,14 +299,14 @@
                             2023
                         </div>
                     </div>
-                    <p>건강한 자는 모든 희망을 안고 , 희망을 가진 자는 모든 꿈을 이룬다는 말이 있듯이<br> 저희 온리포유는 여러분께 사라지지 않는 건강이야기를 들려드리고 , <br>나에게 필요한 맞춤 영양소와 건강한 음식으로 인한<br> 신체 건강 관리를 도와드리고 있습니다.</p>
+                    <p class="c8">건강한 자는 모든 희망을 안고 , 희망을 가진 자는 모든 꿈을 이룬다는 말이 있듯이<br> 저희 온리포유는 여러분께 사라지지 않는 건강이야기를 들려드리고 , <br>나에게 필요한 맞춤 영양소와 건강한 음식으로 인한<br> 신체 건강 관리를 도와드리고 있습니다.</p>
                 </div>
             </div>
         </div>
         <div id="qwrap">
             <div class="qcontainer">
                 <div class="qheader">
-                    <h1>It's Q & A time 🍒</h1>
+                    <h1>가장 많은 공감을 얻은 질문리스트 🍒</h1>
                 </div>
                 <div class="qmain">
                     <div class="qleft">
@@ -311,6 +389,11 @@
                 </div>
             </div>
         </div>
+        <div id="subscribe">
+            <div class="scontainer">
+                <h1>SUBSCRIBE TO OUR SITE AND RECIVE <br>NEW NEWS <br>EVERY TIME</h1>
+            </div>
+        </div>
     </main> 
     <!-- parallax__info -->
     <footer id="footer">
@@ -320,22 +403,23 @@
             </div>
             <div class="footcont">
                 <ul>
-                    <li><a href="#">회사소개</a></li>
-                    <li><a href="#">고객센터</a></li>
-                    <li><a href="#">이용약관</a></li>
-                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
                 </ul>
                 <ul>
-                    <li>주식회사 온리포유</li>
-                    <li>사업자 등록번호 : 00 - 00 - 0000</li>
-                    <li>대표 : 이유나</li>
+                    <li>ONLYFORYOU</li>
+                    <li>BRN : 00 - 00 - 0000</li>
+                    <li>Representative : 이유나</li>
                 </ul>
                 <ul>
-                    <li>대표번호 : 1588-0000</li>
-                    <li>이메일 : only@for.you</li>
-                    <li>주소 : 대한민국</li>
+                    <li>call : 1588-0000</li>
+                    <li>email : only@for.you</li>
+                    <li>Address : 대한민국</li>
                 </ul>
                 <strong>copyright &copy; 2023 onlyforyou Inc All right reserved</strong>
+
             </div>
         </div>
     </footer>
@@ -438,6 +522,10 @@
                 document.querySelector(".c7").classList.add("show");
             }
 
+            if(scrollTop > document.querySelector(".c8").offsetTop - window.innerHeight/2 ){
+                document.querySelector(".c8").classList.add("show");
+            }
+
             if(scrollTop > document.querySelector(".box1").offsetTop - window.innerHeight/2 ){
                 document.querySelector(".box1").classList.add("show");
             }
@@ -457,7 +545,11 @@
                 document.querySelector(".box6").classList.add("show");
             }
 
+            if(scrollTop > document.querySelector(".scontainer").offsetTop - window.innerHeight/2 ){
+                document.querySelector(".scontainer").classList.add("show");
+            }
 
+            
             requestAnimationFrame(scroll);  //1초에 60번만 작동하게 하는 애니메이션
         }
         scroll();

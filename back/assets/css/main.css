@@ -16,13 +16,15 @@
     align-items: center;
 }
 #main .swiper .slider__inner.s1 {
-    background-color: #C8E8A9;
+    background: linear-gradient(to bottom, #e54b4b 0%, #ffc0c0 100%), radial-gradient(at top center, #ffc0c0 00%, #e54b4b 120%) #ffc0c0;
+
 }
 #main .swiper .slider__inner.s2 {
-    background-color: #FFF0B9;
+	background: linear-gradient(to bottom, #FFFDE7 0%, #fff9bc 100%), radial-gradient(at top center, #FFFDE7 00%, #fff9bc 120%) #ffc0c0;
 }
 #main .swiper .slider__inner.s3 {
-    background-color: #FFE3F4;
+    background: linear-gradient(to bottom, #ec606085 0%, #e3d3bd 100%), radial-gradient(at top center, #ec606085 00%, #e3d3bd 120%) #ffc0c0;
+
 }
 #main .swiper .swiper-slide .container {
     display: flex;
@@ -82,10 +84,16 @@
 }
 /* content */
 #main .content {
+    position: relative;
+	overflow: hidden;
+    cursor: pointer;
+
     margin-top: 120px;
-    height: 600px;
+    height: 800px;
     /* background-color: #412d2d; */
+
 }
+
 #main .content h3 {
     font-size: 50px;
     font-weight: 500;
@@ -100,17 +108,24 @@
     height: 100%;
     margin: 0 auto;
     margin-top: 30px;
+
 }
+
 #main .content .content__inner > div {
     width: 18%;
     padding: 2px;
     text-align: center;
     background-color: rgba(231, 231, 231, 0.27);
     border-radius: 10px;
+
 }
 #main .content .content__inner > div img {
     width: 50%;
     height: 150px;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+    display: block;
+	margin: 0 auto;
+	transition: all 0.3s;
 }
 #main .content .content__inner > div p {
     display: block;
@@ -871,6 +886,13 @@ to {
 .c7.show {
     opacity: 1;
 } 
+.c8  {
+    opacity: 0;
+    transition: all 1s;
+}
+.c8.show {
+    opacity: 1;
+} 
 .box1  {
     opacity: 0;
     transition: all 1s;
@@ -911,5 +933,12 @@ to {
     transition: all 1s;
 }
 .box6.show {
+    opacity: 1;
+}  
+.scontainer {
+    opacity: 0;
+    transition: all 1s;
+}
+.scontainer.show {
     opacity: 1;
 }  
