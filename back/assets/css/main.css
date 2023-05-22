@@ -840,51 +840,71 @@ to {
 .c1  {
     opacity: 0;
     transition: all 1s;
+    transform: translateX(-50px);
 }
 .c1.show {
     opacity: 1;
+    transform: translateX(0px);
 } 
 .c2  {
     opacity: 0;
     transition: all 1s;
+    transform: translateX(50px);
 }
 .c2.show {
     opacity: 1;
+    transform: translateX(0px);
 } 
 .c3  {
     opacity: 0;
     transition: all 1s;
+    transform: translateX(-50px);
 }
 .c3.show {
     opacity: 1;
+    transform: translateX(0px);
 } 
 .c4  {
     opacity: 0;
     transition: all 1s;
+    transform: translateX(50px);
 }
 .c4.show {
     opacity: 1;
+    transform: translateX(0px);
+
 } 
 .c5  {
     opacity: 0;
     transition: all 1s;
+    transform: translateX(-50px);
+
 }
 .c5.show {
     opacity: 1;
+    transform: translateX(0px);
+
 } 
 .c6  {
     opacity: 0;
     transition: all 1s;
+    transform: translateX(50px);
+
 }
 .c6.show {
     opacity: 1;
+    transform: translateX(0px);
+
 } 
 .c7  {
     opacity: 0;
     transition: all 1s;
+    transform: translateY(100px);
 }
 .c7.show {
     opacity: 1;
+    transform: translateY(0);
+
 } 
 .c8  {
     opacity: 0;
