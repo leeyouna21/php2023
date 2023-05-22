@@ -10,8 +10,15 @@
 
     <title>Only For You</title>
     <link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Lato:wght@100&family=Poppins:ital,wght@1,800&display=swap" rel="stylesheet">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&family=Lato:wght@100&family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
     <style>
-
+    
         /* main */
         #main {
             margin-top: 100px;
@@ -227,7 +234,7 @@
         /* //main */
         #bestwrap {
             width: 100%;
-            height: 550px;
+            height: 420px;
             background-color: #ffec4034;
             position: relative;
             display: flex;
@@ -236,20 +243,22 @@
 
         .bestcontainer {
             width: 100%;
-            height: 600px;
+            height: 420px;
             margin: 0 auto;
             
         }
 
         .bestcontainer h1 {
             width: 100%;
-            font-size: 70px;
+            font-size: 40px;
             font-weight: normal;
             line-height: 1.3;
             position: relative;
             z-index: 1;
             word-break: break-all;
-            font-family: 'Poltawski Nowy', serif;
+            /* padding-left: 40px; */
+            font-family: 'Poppins', Italic;
+            font-family: SBAggro;
         }
         .bestcontainer img {
             width: 275px;
@@ -258,7 +267,7 @@
             margin: 0 auto;
             display: block;
             position: absolute;
-            top: 30%;
+            top: 20%;
             left: 40%;
             transform: translate(-50%, -50%);
             z-index: 2;
@@ -277,26 +286,58 @@
         
         #lastwrap {
             width: 100%;
-            height: 800px;
+            height: 600px;
             background-color: #FFEC40;
         }
         .lastcontainer {
             width: 1260px;
-            height: 800px;
+            height: 600px;
             margin: 0 auto;
         }
         .lastcontainer h1 {
             font-weight: bold;
             font-size: 90px;
             color: #86BEE7;
-            padding-top: 70px;
+            padding-top: 30px;
             text-align: center;
-            line-height: 2;
+            line-height: 1.5;
+            font-family: 'Poppins', Italic;
         }
 
         .lastcontainer h1 span {
         animation: changingText 4s infinite;
+        font-family: 'Poppins', Italic;
+        font-weight: 200;
         }
+        .scroll-arrow {
+        position: fixed;
+        bottom: 30px; /* 원하는 위치로 조정 */
+        width: 40px; /* 화살표 너비 */
+        height: 40px; /* 화살표 높이 */
+        background-image: url("../../assets/img/hwa.png"); /* 화살표 이미지 경로 */
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 9999; /* 화살표가 다른 요소 위에 표시되도록 설정 */
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: default;
+        }
+
+        /* 애니메이션 효과 추가 */
+        .scroll-arrow {
+        animation: scrollAnimation 1s infinite alternate;
+        }
+
+        @keyframes scrollAnimation {
+        0% {
+            transform: translateY(0); /* 초기 위치 */
+        }
+        100% {
+            transform: translateY(10px); /* 이동할 거리 */
+        }
+        }
+
 
     </style>
 </head>
@@ -315,18 +356,12 @@
         </div>
     </header>
     <main id="main" >
-        <div id="bestwrap">
-            <div class="bestcontainer">
-                <h1 class="main-heading ">
-                    Now, if you're ready, Scroll down and experience OnlyForYou!
-                    Now, if you're ready, Scroll down and experience OnlyForYou!
-                    Now, if you're ready, Scroll down and experience OnlyForYou!
-                    Now, if you're ready, Scroll down and experience OnlyForYou!
-                    Now, if you're ready, Scroll </h1>
-
-                    <img src="../../assets/img/victory.png" alt="트로피">
+        <div id="lastwrap">
+            <div class="lastcontainer">
+                <h1>LET'S LEARN <br>ABOUT <br> <span id="changing-text" style="font-weight: 100;"></span> <br> TOGETHER</h1>
             </div>
         </div>
+        <a href="#section2" class="scroll-arrow"></a>
         <div class="category_wrap">
             <div class="container">
                 <div class="content">
@@ -411,9 +446,19 @@
                 </div>
             </div>
         </div>
-        <div id="lastwrap">
-            <div class="lastcontainer">
-                <h1>LET'S LEARN <br>ABOUT <br> <span id="changing-text" style="font-weight: 100;"></span> <br> TOGETHER</h1>
+        <div id="bestwrap">
+            <div class="bestcontainer">
+                <h1 class="main-heading ">
+                    SUBSCRIBE TO OUR SITE AND RECIVE NEW NEWS EVERY TIME ! ! ! !<br>
+                    SUBSCRIBE TO OUR SITE AND RECIVE NEW NEWS EVERY TIME ! ! ! !<br>
+                    SUBSCRIBE TO OUR SITE AND RECIVE NEW NEWS EVERY TIME ! ! ! !<br>
+                    SUBSCRIBE TO OUR SITE AND RECIVE NEW NEWS EVERY TIME ! ! ! !<br>
+                    SUBSCRIBE TO OUR SITE AND RECIVE NEW NEWS EVERY TIME ! ! ! !<br>
+                    SUBSCRIBE TO OUR SITE AND RECIVE NEW NEWS EVERY TIME ! ! ! !<br>
+                    SUBSCRIBE TO OUR SITE AND RECIVE NEW NEWS EVERY TIME ! ! ! !<br>
+                    SUBSCRIBE TO OUR SITE AND RECIVE NEW NEWS EVERY TIME ! ! ! !</h1>
+
+                    <img src="../../assets/img/victory.png" alt="트로피">
             </div>
         </div>
     </main>
@@ -424,22 +469,23 @@
             </div>
             <div class="footcont">
                 <ul>
-                    <li><a href="#">회사소개</a></li>
-                    <li><a href="#">고객센터</a></li>
-                    <li><a href="#">이용약관</a></li>
-                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
                 </ul>
                 <ul>
-                    <li>주식회사 온리포유</li>
-                    <li>사업자 등록번호 : 00 - 00 - 0000</li>
-                    <li>대표 : 이유나</li>
+                    <li>ONLYFORYOU</li>
+                    <li>BRN : 00 - 00 - 0000</li>
+                    <li>Representative : people</li>
                 </ul>
                 <ul>
-                    <li>대표번호 : 1588-0000</li>
-                    <li>이메일 : only@for.you</li>
-                    <li>주소 : 대한민국</li>
+                    <li>call : 1588-0000</li>
+                    <li>email : only@for.you</li>
+                    <li>Address : ansan </li>
                 </ul>
                 <strong>copyright &copy; 2023 onlyforyou Inc All right reserved</strong>
+
             </div>
         </div>
     </footer>
@@ -468,7 +514,7 @@
     </div>
     <script>
         const textElement = document.getElementById('changing-text');
-        const texts = ['Health' , 'Exercise ', 'Nutrition ' , 'body' ,'Diet ', 'Vitamins ', 'Vegetables '];
+        const texts = ['Health' , 'Exercise ', 'Nutrition' , 'body' ,'Diet ', 'Vitamins ', 'Vegetables',];
         
         let currentIndex = 0;
         

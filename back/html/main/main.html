@@ -8,7 +8,36 @@
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <title>Only For You</title>
+    <style>
+        .scroll-arrow {
+        position: fixed;
+        bottom: 30px; /* 원하는 위치로 조정 */
+        width: 40px; /* 화살표 너비 */
+        height: 40px; /* 화살표 높이 */
+        background-image: url("../../assets/img/hwa.png"); /* 화살표 이미지 경로 */
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 9999; /* 화살표가 다른 요소 위에 표시되도록 설정 */
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: default;
+        }
 
+        /* 애니메이션 효과 추가 */
+        .scroll-arrow {
+        animation: scrollAnimation 1s infinite alternate;
+        }
+
+        @keyframes scrollAnimation {
+        0% {
+            transform: translateY(0); /* 초기 위치 */
+        }
+        100% {
+            transform: translateY(10px); /* 이동할 거리 */
+        }
+        }
+    </style>
 </head>
 <body>
     <header id="header">
@@ -23,6 +52,8 @@
         </div>
     </header>
     <main id="main">
+        <a href="#section2" class="scroll-arrow"></a>
+
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slider__inner s1">
