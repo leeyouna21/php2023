@@ -237,7 +237,9 @@
     </style>
 </head>
 <body>
-<?php include "../include/header.php" ?>
+    <?php
+        include "../include/header.php";
+    ?>
     <main id="main">
         <div class="board_slider">
             <div class="container">
@@ -365,7 +367,7 @@
             <div class="container">
                 <div class="board_desc">
                     <h2>최근레시피 목록</h2>
-                    <a href="boardWrite.html" class="btnStyle3">글쓰기</a>
+                    <a href="boardWrite.php" class="btnStyle3">글쓰기</a>
                 </div>
                 <table>
                     <colgroup>
@@ -472,7 +474,9 @@
         </div>
     </main>
     <!-- main -->
-    <?php include "../include/footer.php" ?>
+    <?php
+        include "../include/footer.php";
+    ?>
 
     <script>
         const swiper = new Swiper('.swiper', {

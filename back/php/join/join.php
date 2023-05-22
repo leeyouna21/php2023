@@ -41,6 +41,12 @@
             border-radius : 10px;
             z-index: 1000;
         }
+        .join__form .inputStyle {
+            box-sizing:border-box;
+        }
+        .join__form a {
+            margin-left: 25px;
+        }
         .name__wrap > div {
             position: relative;
         }
@@ -51,6 +57,12 @@
             display: inline-block;
             border: 1px solid #000;
             padding: 3px 7px;
+        }
+        #youNick {
+            width: 66%;
+        }
+        .checkagree__span {
+            cursor: pointer;
         }
     </style>
     
@@ -78,7 +90,7 @@
                             </div>
                             <div class="nickname">
                                 <label for="youNick" class="required">닉네임</label>
-                                <input type="text" id="youNick" name="youNick" placeholder="사용하실 닉네임을 입력해주세요." class="inputStyle" required>
+                                <input type="text" id="youNick" name="youNick" placeholder="닉네임을 입력해주세요." class="inputStyle" required>
                                 <a href="#c" onclick="nickChecking()">중복 확인</a>
                                 <p class="msg" id="youNickComment"><!--이미 사용중인 닉네임입니다.--></p>
                             </div>
@@ -87,8 +99,7 @@
                             <label for="youID" class="required">아이디</label>
                             <input type="text" id="youID" name="youID" placeholder="아이디는 숫자와 영어만 입력이 가능합니다." class="inputStyle" required>
                             <a href="#c" onclick="IdChecking()">아이디 중복검사</a>
-                            <p class="msg" id="youIDComment"><!----></p>
-
+                            <p class="msg" id="youIDComment"></p>
                         </div>
                         <div>
                             <label for="youPass" class="required">비밀번호</label>
@@ -176,9 +187,8 @@
         let isEmailCheck = false;
         let isNickCheck = false;
         let isIDCheck =false;
-        let isPhoneCheck =false;
+        let isphoneCheck =false;
 
-        
         function emailChecking(){
             let youEmail = $("#youEmail").val();
             if(youEmail == null || youEmail == ''){
@@ -263,7 +273,7 @@
         function phoneChecking(){
             let youPhone = $("#youPhone").val();
             if(youPhone == null || youPhone == ''){
-                $("#youPhoneComment").text("* 연락 받으실 연락처를 입력해주세요!");
+                $("#youPhoneComment").text("* 연락받으실 연락처를 적어주세요.");
             } else {
                 $.ajax({
                     type : "POST",
@@ -272,10 +282,10 @@
                     dataType: "json",
                     success : function(data){
                         if(data.result == "good"){
-                            $("#youPhoneComment").text("* 사용 가능한 번호 입니다");
+                            $("#youPhoneComment").text("* 사용 가능한 번호입니다.");
                             isPhoneCheck = true;
                         } else {
-                            $("#youPhoneComment").text("* 이미 등록 된 번호 입니다");
+                            $("#youPhoneComment").text("* 이미 등록된 번호입니다.");
                             isPhoneCheck = false;
                         }
                     },
@@ -290,13 +300,13 @@
         function joinChecks(){
             //아이디 유효성 검사
             if($("#youID").val() == ''){
-                $("#youIDComment").text("* 아이디를 입력해주세요");
+                $("#youIDComment").text("* 이름을 입력해주세요");
                 $("#youID").focus();
                 return false;
             }
             let getyouID = RegExp(/^[a-z]+$/);
             if(!getyouID.test($("#youID").val())){
-                $("#youIDComment").text("* 아이디는 영어만 사용 가능합니다.");
+                $("#youIDComment").text("* ID는 영어만 사용 가능합니다.");
                 $("#youID").val('');
                 $("#youID").focus();
                 return false;

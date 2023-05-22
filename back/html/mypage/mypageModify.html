@@ -9,10 +9,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/style.css">
     <style>
-        /* .name__wrap > div > p,
-        .age__wrap > div > p {
-            color: #f00;
-            font-size: 12px;
+        
+        .join__inner input {
+            box-sizing: border-box;
         }
         .join__form button {
             float: right;
@@ -41,53 +40,189 @@
             height: 200px; 
             display: block; 
             margin: auto;
-        }
-        .file_img_desc {
-            text-align: center; 
-            color: #B4B4B4;
-        } */
-        
-        #wrap {
-            width: 100%;
-            height: 1080px;
-            background-color: #ccc;
-        }
-        #wrap .container {
-            width: 1200px;
-            height: inherit;
-            background-color: #b87c7c;
-        }
-        .header {
-            margin-top: 100px;
-            /* width: 200px;
-            height: 200px; */
-            background-color: #934d4d;
-        }
-        .header h2 {
-            font-size: 30px;
-            font-weight: 500;
-            text-align: center;
-        }
-        .header img {
-            width: 80px; 
-            height: 80px; 
-            display: block; 
-            margin: auto;
-            padding-top: 50px;
             cursor: pointer;
         }
-        .pro__img__desc {
-            font-size: 18px;
-            color: #5a5a5a;
-            text-align: center;
-            padding-top: 20px;
+        .file_img_desc {
+            display: block;
+            margin: 0 auto; 
+            border: none;
+            padding: 5px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: #EBFFB3;
         }
-        .main {
-            width: 1200px;
-            height: 1000px;
-            background-color: #f08383;
+        .name_nick .name{
+            width: 100%;
+        }
+        .name_nick .name .title {
+            display: inline-block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-size: 1.43rem;
+            font-weight: 500;
+            margin-top: 0;
+        }
+        .name_nick .nick{
+            width: 100%;
+        }
+        .name_nick .nick .nick_wrap {
             display: flex;
         }
+        .name_nick .nick input {
+            width: 70%;
+        }
+        .name_nick .nick button {
+            height: 50px;
+            padding: 10px;
+            width: 40%;
+            background-color: #ffad7f;
+        }
+        .name_nick .nick button:hover{
+            background-color: #f89e69;
+            color: #fff;
+        }
+        .inputStyle5 {
+            background-color: #EBFFB3B2;
+            width: 100%;
+            border-radius: 5px;
+            padding: 15px 10px;
+            font-size: 12px;
+            height: 50px;
+            border: 0;
+            font-weight: 300;
+        }
+        .mypage_font {
+            margin-bottom: 5px;
+            font-size: 1.43rem;
+            font-weight: 500;
+        }
+        .nickcommet {
+            font-size: 12px;
+            color: #f01;
+        }
+        .pl {
+            padding-left: 0;
+        }
+        /* id */
+        .you .title {
+            display: inline-block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-size: 1.43rem;
+            font-weight: 500;
+            margin-top: 0;
+        }
+        /* pass */
+        .pass_wrap{
+            display: flex;
+            justify-content: space-between;
+        }
+        .pass_wrap input {
+            width: 75%;
+        }
+        .pass_wrap button {
+            width: 25%;
+            height: 50px;
+            padding: 10px;
+            background-color: #ffad7f;
+        }
+        .pass_wrap button:hover{
+            background-color: #f89e69;
+            color: #fff;
+        }
+        .mb3 {
+            margin-bottom: 3em;
+        }
+        /* age */
+        /* nick */
+        .youNick_wrap {
+            display: flex;
+        }
+        .youNick_wrap input {
+            width:55%;
+        }
+        .youNick_wrap a {
+            display: block;
+            padding: 15px 0;
+            width: 20%;
+            height: 50px;
+            background-color: #ffad7f;
+            font-size: 13px;
+            font-weight: 500;
+            border-radius: 10px;
+            text-align: center;
+            box-sizing: border-box;
+            margin-left: 10px;
+        }
+        .youNick_wrap .Nickbutton {
+            width: 20% !important;
+            height: 50px !important;
+            padding: 10px !important;
+            background-color: #ffad7f;
+        }
+        /* phone */
+        .phone_inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .phone_inner input{
+            width:55%;
+        }
+        .phone_inner a {
+            margin-left: 13px;
+            display: block;
+            padding: 15px 0;
+            width: 20%;
+            height: 50px;
+            background-color: #ffad7f;
+            font-size: 13px;
+            font-weight: 500;
+            border-radius: 10px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .phone_inner a:hover{
+            color: #fff;
+        }
+        .phone_inner button {
+            height: 50px;
+            padding: 10px;
+            width: 20%;
+            background-color: #ffad7f;
+        }
+        .phone_inner button:hover{
+            color: #fff;
+        }
+        /* age */
+        .age_wrap {
+            display: flex;
+        }
+        .age_wrap button {
+            height: 50px;
+            padding: 10px;
+            width: 40%;
+            background-color: #ffad7f;
+        }
+        .age_wrap button:hover{
+            background-color: #f89e69;
+            color: #fff;
+        }
+        /* gender */
+        .gender{
+            width: 40%;
+        }
+        .gender .title {
+            display: inline-block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-size: 1.43rem;
+            font-weight: 500;
+            margin-top: 0;
+        }
+        .gender .desc {
+            padding: 14px;
+        }
+        
     </style>
 </head>
 <body>
@@ -111,50 +246,94 @@
         </div>
     </header>
     <!-- header -->
-    
-
-    <div id="wrap">
-        <div class="container">
-            <header class="header">
-                <h2 class="title">마이페이지(회원 정보 수정)</h2>
-                <form action="upload.php" method="POST"></form>
+    <main id="main" class="container">
+        <div class="join__inner">
+            <h2 class="title">마이페이지(회원정보수정)</h2>
+            <form action="mypageImgeUpload.php" method="POST"></form>
                 <label for="file-input">
-                    <img src="../../assets/img/01-01.png" alt="프로필 이미지" class="pro__img">
+                    <img id="preview-image" src="../../assets/img/User.png" alt="이미지" class="file_img">
                 </label>
-                <input type="file" id="file-input" style="display: none;">
-                <p class="pro__img__desc">이미지 변경</p>
-            </header>
-
-            <main class="main">
-                <form action="#" name="#" method="POST">
+                <input type="file" id="file-input" style="display: none;" onchange="previewFile(event)">
+                <button type="submit" class="file_img_desc">이미지 변경</button>              
+            </form>
+            <div class="join__form">
+                
                     <fieldset>
-                        <legend class="회원가입 영역"></legend>
-                        <div class="name">
-                            <label for="youName" class="required">이름</label>
-                            <div type="text" id="youName" name="youName" placeholder="이유나" class="inputStyle">이유나</div>
-                            <p class="namecommtent">* 이름은 수정이 불가능합니다.</p>
+                        <div class="name_nick">
+                            <div class="name mb30">
+                                <h2 class="title mypage_font">이름</h2>
+                                <div class="desc inputStyle5" style="box-sizing:border-box">이름넣을곳</div>
+                                <p class="nickcommet">*아이디는 수정이 불가능 합니다.</p>
+                            </div>
+                            <form action="mypageNickUpload.php" method="POST" class="nick">
+                                <label for="youNick" class="required">닉네임</label>
+                                <div class="youNick_wrap">
+                                    <input type="text" id="youNick" name="youNick" placeholder="사용하실 닉네임을 입력해주세요." class="inputStyle5" required>
+                                    <a href="#c" onclick="nickChecking()">중복 확인</a>
+                                    <button class="Nickbutton" type="submit">닉네임변경</button>
+                                </div>
+                                <p class="msg" id="youNickComment"><!--이미 사용중인 닉네임입니다.--></p>
+                            </form>
+                        </div>
+                        <div class="you">
+                            <h2 class="title mypage_font">아이디</h2>
+                            <div class="desc inputStyle5" style="box-sizing:border-box;">이름넣을곳</div>
+                        </div>
+                        <form action="mypagePassUpload.php" method="post" class="mb30">
+                            <div class="mb30">
+                                <label for="youPass" class="required">비밀번호</label>
+                                <input type="password" id="youPass" name="youPass" placeholder="비밀번호를 입력해주세요." class="inputStyle5 pl" required>
+                                <p class="msg" id="youPassComment"><!--비밀번호는 특수기호를 하나 이상 포함하여야 합니다.--></p>
+                            </div>
+                            <div>
+                                <label for="youPassC" class="required">비밀번호 확인</label>
+                                <div class="pass_wrap">
+                                    <input type="password" id="youPassC" name="youPassC" placeholder="비밀번호를 다시한번 입력해주세요." class="inputStyle5 pl" required>
+                                    <button type="submit">비밀번호 변경</button>
+                                </div>
+                                <p class="msg" id="youPassCComment"><!--비밀번호가 일치하지 않습니다.--></p>
+                            </div>
+                        </form>
+                        <div class="you">
+                            <h2 class="title mypage_font">이메일</h2>
+                            <div class="desc inputStyle5" style="box-sizing:border-box;">이메일넣을곳</div>
+                        </div>
+                        <div class="phone">
+                            <label for="youPhone" class="required">연락처</label>
+                            <div class="phone_inner">
+                                <input type="text" id="youPhone" name="youPhone" placeholder="연락받으실 번호를 입력해주세요." class="inputStyle5" required>
+                                <a href="#c" onclick="phoneChecking()">연락처 중복검사</a>
+                                <button type="submit">변경</button>
+                            </div>
+                            <p class="msg" id="youPhoneComment"><!--휴대폰 번호를 다시 입력해주세요.--></p>
+                        </div>
+                        <div class="age__wrap">
+                            <form action="mypageAgeUpload.php" method="post" class="youage">
+                                <label for="youAge" class="required">연령대</label>
+                                <div class="age_wrap">
+                                    <select name="#" id="#" class="inputStyle5">
+                                        <option value="10s">10 대</option>
+                                        <option value="20s">20 대</option>
+                                        <option value="30s">30 대</option>
+                                        <option value="40s">40 대</option>
+                                        <option value="50s">50 이상</option>
+                                    </select>
+                                    <button type="submit">연령 변경</button>
+                                </div>
+                            </form>
+                            <div class="gender">
+                                <h2 class="title mypage_font">성별</h2>
+                                <div class="desc inputStyle5" style="box-sizing:border-box">성별넣을곳</div>
+                                <p class="nickcommet">*성별은 수정이 불가능 합니다.</p>
+                            </div>
                         </div>
                     </fieldset>
-                </form>
-                <form action="#" name="#" method="POST">
-                    <fieldset>
-                        <legend class="회원가입 영역"></legend>
-                        <div class="nick">
-                            <label for="youNick" class="required">닉네임</label>
-                            <div type="text" id="youNick" name="youNick" placeholder="이유나" class="inputStyle">미뮤나</div>
-                            <p class="namecommtent">* 수정할 닉네임을 적어주세요.</p>
-                            <a href="#">중복 확인</a>
-                        </div>
-                    </fieldset>
-                </form>
-            </main>
-            
+                    
+                    <button type="submit">탈퇴하기</button>
+            </div>
         </div>
-    </div>
-    <!-- main -->
-
-
-
+    </main>
+    <!-- //main -->
     <footer id="footer">
         <div class="container">
             <div class="footlogo">
@@ -182,82 +361,74 @@
         </div>
     </footer>
     <!-- footer -->
+    <script>
+        function previewFile(event) {
+        var fileInput = event.target;
+        var previewImage = document.getElementById("preview-image");
 
-
-        <!-- <form action="upload.php" method="POST"></form>
-            <label for="file-input"></label>
-            <input type="file" id="youID" style="display: none;">
-            <p class="youID">아이디 변경</p>              
-        </form>
-
-
-            <div class="join__form">
-                <form action="#" name="#" method="post">
-                    <fieldset>
-                        <legend class="blind">회원가입 영역</legend>
-                        <div class="name__wrap">
-                            <div class="name">
-                                <label for="youName" class="required">이름</label>
-                                <input type="text" id="youName" name="youName" placeholder="이름을 입력해주세요." class="inputStyle" required>
-                                <p class="namecommet">이름은 수정이 불가능 합니다.</p>
-                            </div>
-                            <div class="inputStyle">
-                                이름
-                            </div>
-                            <div class="nickname">
-                                <label for="nickName" class="required">닉네임</label>
-                                <input type="text" id="nickName" name="nickName" placeholder="사용하실 닉네임을 입력해주세요." class="inputStyle" required>
-                                <p class="nickcommet">닉네임은 수정이 불가능 합니다.</p>
-                            </div>
-                        </div>
-                        <div>
-                            <label for="youID" class="required">아이디</label>
-                            <input type="text" id="youID" name="youID" placeholder="아이디는 숫자와 영어만 입력이 가능합니다." class="inputStyle" required>
-                        </div>
-                        <div>
-                            <label for="youPass" class="required">비밀번호</label>
-                            <input type="password" id="youPass" name="youPass" placeholder="비밀번호를 입력해주세요." class="inputStyle" required>
-                        </div>
-                        <div>
-                            <label for="youPassC" class="required">비밀번호 확인</label>
-                            <input type="password" id="youPassC" name="youPassC" placeholder="비밀번호를 다시한번 입력해주세요." class="inputStyle" required>
-                        </div>
-                        <div>
-                            <label for="youEmail" class="required">이메일</label>
-                            <input type="email" id="youEmail" name="youEmail" placeholder="이메일을 입력해주세요." class="inputStyle" required>
-                        </div>
-                        <div>
-                            <label for="youPhone" class="required">연락처</label>
-                            <input type="text" id="youPhone" name="youPhone" placeholder="연락받으실 번호를 입력해주세요." class="inputStyle" required>
-                        </div>
-                        <div class="age__wrap">
-                            <div class="youage">
-                                <label for="youAge" class="required">연령대</label>
-                                <select name="#" id="#">
-                                    <option value="10s">10 대</option>
-                                    <option value="20s">20 대</option>
-                                    <option value="30s">30 대</option>
-                                    <option value="40s">40 대</option>
-                                    <option value="50s">50 이상</option>
-                                </select>
-                            </div>
-                            <div class="gender">
-                                <label for="youGender" class="required">성별</label>
-                                <select name="#" id="#">
-                                    <option value="woman">여자</option>
-                                    <option value="man">남자</option>
-                                </select>
-                                <p class="nickcommet">성별은 수정이 불가능 합니다.</p>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <button type="submit">수정하기</button>
-                    <button type="submit">탈퇴하기</button>
-                </form>
-            </div>
-        </div>
-    </main> -->
-
-
+        var fileReader = new FileReader();
+        fileReader.onload = function () {
+            previewImage.src = fileReader.result;
+        };
+        
+        fileReader.readAsDataURL(fileInput.files[0]);
+    }
+    </script>
+    <script>
+        function nickChecking(){
+            let youNick = $("#youNick").val();
+            if(youNick == null || youNick == ''){
+                $("#youNickComment").text("* 닉네임을 입력해주세요!");
+            } else {
+                $.ajax({
+                    type : "POST",
+                    url: "../join/joinCheck.php",
+                    data: {"youNick": youNick, "type": "isNickCheck"},
+                    dataType: "json",
+                    success : function(data){
+                        if(data.result == "good"){
+                            $("#youNickComment").text("* 사용 가능한 닉네임 입니다");
+                            isNickCheck = true;
+                        } else {
+                            $("#youNickComment").text("* 이미 존재하는 닉네임 입니다");
+                            isNickCheck = false;
+                        }
+                    },
+                    error : function(request, status, error){
+                        console.log("request" + request);
+                        console.log("status" + status);
+                        console.log("error" + error);
+                    }
+                })
+            }
+        }
+        function phoneChecking(){
+            let youPhone = $("#youPhone").val();
+            if(youPhone == null || youPhone == ''){
+                $("#youPhoneComment").text("* 연락받으실 연락처를 적어주세요.");
+            } else {
+                $.ajax({
+                    type : "POST",
+                    url: "joinCheck.php",
+                    data: {"youPhone": youPhone, "type": "isPhoneCheck"},
+                    dataType: "json",
+                    success : function(data){
+                        if(data.result == "good"){
+                            $("#youPhoneComment").text("* 사용 가능한 번호입니다.");
+                            isPhoneCheck = true;
+                        } else {
+                            $("#youPhoneComment").text("* 이미 등록된 번호입니다.");
+                            isPhoneCheck = false;
+                        }
+                    },
+                    error : function(request, status, error){
+                        console.log("request" + request);
+                        console.log("status" + status);
+                        console.log("error" + error);
+                    }
+                })
+            }
+        }
+    </script>
 </body>
 </html>

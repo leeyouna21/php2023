@@ -1,6 +1,6 @@
 <?php
     include "../connect/connect.php";
-
+    include "../connect/session.php";
     $youEmail = $_POST['youEmail'];
     $youID = $_POST['youID'];
     $youName = $_POST['youName'];
@@ -14,7 +14,7 @@
 
     // echo $youEmail,$youID,$youName,$youPass,$youPhone,$youAge,$youSex;
 
-    $sql = "INSERT INTO member(youEmail, youNick, youID, youName, youPass, youPhone,youAge, youSex,regTime) VALUES('$youEmail','$youNick','$youID', '$youName', '$youPass', '$youPhone', '$youAge', '$youSex','$regTime')";
+    $sql = "INSERT INTO member(youEmail, youNick, youID, youName, youPass, youPhone, youAge, youSex, regTime) VALUES('$youEmail', '$youNick', '$youID', '$youName', '$youPass', '$youPhone', '$youAge', '$youSex', '$regTime')";
     $connect -> query($sql);
 
     // 사용자가 데이터 입력 -> 유효성 검사 -> 통과 -> 회원가입(쿼리문전송)

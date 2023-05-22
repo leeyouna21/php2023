@@ -26,7 +26,7 @@
             <div class="boardW__inner mb100">
                 <h1>요리방 공유 레시피 작성하기</h1>
                 <div class="boardW__write">
-                    <form action="#" name="#" method="post">
+                    <form action="boardWrite.php" name="boardWrite" method="post">
                         <fieldset class="field1">
                             <legend class="blind">게시글 작성하기</legend>
                             <div>

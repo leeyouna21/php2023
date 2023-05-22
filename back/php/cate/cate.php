@@ -297,13 +297,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="search">
-                    <h2>어느 부분이 고민이신가요 ?</h2>
-                    <form action="#">
-                        <input id="searchInput" name="searchInput"type="text" placeholder="고민이 되는 부분을 검색해 보세요" required>
-                        <button id="searchButton" type="submit"></button>
-                    </form>
-                </div>
                 <div class="list">
                     <h2 class="list_title"></h2>
                     <div class="list_show" id="div1">
@@ -338,11 +331,16 @@
         const urlParams = new URLSearchParams(window.location.search);
         const category = urlParams.get('category');
         let arr =[];
-        document.addEventListener("DOMContentLoaded", ()=> {
-            data(category);
-            const targetElement = document.querySelector(".list");
+        
+        
 
-            const scrollToTarget = () => {
+        document.addEventListener("DOMContentLoaded", ()=> {
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('category');
+            if (category) {
+                data(category);
+                const targetElement = document.querySelector(".list");
+                const scrollToTarget = () => {
                 const windowHeight = window.innerHeight;
                 const targetOffset = targetElement.getBoundingClientRect().top;
                 const currentOffset = window.pageYOffset;
@@ -350,21 +348,22 @@
                 const duration = 300;
                 const startTime = performance.now();
                 const animateScroll = (timestamp) => {
-                const timeElapsed = timestamp - startTime;
-                const progress = Math.min(timeElapsed / duration, 1);
-                const scrollOffset = currentOffset + difference * progress;
-                if (windowHeight > targetElement.offsetHeight) {
+                    const timeElapsed = timestamp - startTime;
+                    const progress = Math.min(timeElapsed / duration, 1);
+                    const scrollOffset = currentOffset + difference * progress;
+                    if (windowHeight > targetElement.offsetHeight) {
                     window.scrollTo(0, scrollOffset);
-                } else {
+                    } else {
                     window.scrollTo(0, scrollOffset - windowHeight / 2);
-                }
-                if (timeElapsed < duration) {
+                    }
+                    if (timeElapsed < duration) {
                     requestAnimationFrame(animateScroll);
-                }
+                    }
                 };
                 requestAnimationFrame(animateScroll);
-            };
-            scrollToTarget();
+                };
+                scrollToTarget();
+            }
         });
 
         content__inner.forEach((el,i)=>{
@@ -493,7 +492,7 @@
                 `)
                 modal_container.innerHTML = show.join('');
                 modal()
-            }
+        }
             
         
 
@@ -514,23 +513,7 @@
                     body.classList.remove("modal-open");
                 })
         }
-        // function search(query) {
-        // const result = data().filter(item => {
-        //     // 대소문자를 구분하지 않고 검색하려면 toLowerCase() 메서드를 사용하세요.
-        //     return item.name.toLowerCase().includes(query.toLowerCase());
-        // });
-        // return result;
-        // }
-        // function handleSearch() {
-        //     const searchInput = document.getElementById('searchInput');
-        //     const query = searchInput.value;
-        //     const searchResult = search(query);
-
-        //     // 검색 결과를 처리하는 코드 작성
-        //     console.log(searchResult);
-        // }
-        // const searchButton = document.getElementById('searchButton');
-        // searchButton.addEventListener('click', handleSearch());
+        
     </script>
 
     <script>

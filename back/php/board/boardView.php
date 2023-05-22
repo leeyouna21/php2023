@@ -11,7 +11,9 @@
 
 </head>
 <body>
-<?php include "../include/header.php" ?>
+    <?php
+        include "../include/header.php";
+    ?>
     <main id="main" class="aggro">
         <div class="boardV__inner">
             <div class="container">
@@ -76,7 +78,9 @@
             </div>
         </div>
     </main>
-    <?php include "../include/footer.php" ?>
+    <?php
+        include "../include/footer.php";
+    ?>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>

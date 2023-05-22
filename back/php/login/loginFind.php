@@ -27,7 +27,7 @@
 <body>
     
     <main id="main" class="container ">
-        <div class="login_inner mt70">
+        <div class="login_inner mt150">
             <div class="banner"><img src="../../assets/img/logo.png" alt="배너이미지"></div>
             <p>아이디를 찾기 위한 정보를 입력해주세요</p>
             <div class="login_form">

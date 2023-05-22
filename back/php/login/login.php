@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입 페이지</title>
+    <title>로그인 페이지</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -29,13 +29,13 @@
         <a href="#footer">푸터 영역 바로가기</a>
     </div>
     <!-- //skip -->
-    <main id="main" class="container ">
+    <main id="main" class="container mt150">
         <div class="login_inner">
             <div class="banner"><img src="../../assets/img/logo.png" alt="배너이미지"></div>
             <div class="login_form">
                 <form action="loginSave.php" name="loginSave" method="post">
                     <fieldset>
-                        <legend class="blind">아이디 찾기</legend>
+                        <legend class="blind">로그인하기</legend>
                         <div>
                             <label for="youID" class="blind">아이디</label>
                             <input type="text" id="youID" name="youID" class="inputStyle"   placeholder="아이디" required>
@@ -52,8 +52,8 @@
             </div>
             <div class="login_footer">
                 <ul class="listStyle">
-                    <li><a href="join.php">회원가입</a></li>
-                    <li><a href="idFind.php">아이디 찾기</a></li>
+                    <li><a href="../join/join.php">회원가입</a></li>
+                    <li><a href="loginFind.php">아이디 찾기</a></li>
                     <li><a href="pwFind.php">비밀번호 찾기</a></li>
                 </ul>
             </div>
@@ -118,7 +118,7 @@
             }
         }
 
-        document.querySelector("#youID").addEventListener("keyup", IDChecking);
+        document.querySelector("#youID").addEventListener("focusout", IDChecking);
         // document.querySelector("#youPass").addEventListener("keyup", pwChecking);
     </script>
 </body>
