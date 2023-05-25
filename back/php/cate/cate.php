@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/css/style.css">
+<?php include "../include/head.php"; ?>
+    <link rel="stylesheet" href="../../assets/css/maincate.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
     <title>Only For You</title>
-
+    <link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Lato:wght@100&family=Poppins:ital,wght@1,800&display=swap" rel="stylesheet">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&family=Lato:wght@100&family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
     <style>
+    
         /* main */
         #main {
             margin-top: 100px;
-            margin-bottom: 200px;
+            /* margin-bottom: 200px; */
             font-family: 'SBAggro';
         }
          /* content */
@@ -48,6 +54,7 @@
         #main .content .content__inner > div img {
             width: 50%;
             height: 150px;
+            filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
         }
         #main .content .content__inner > div p {
             display: block;
@@ -223,73 +230,163 @@
             color: #f01;
         }
         /* //main */
+        
 
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+        }
+            to {
+                transform: rotate(360deg);
+        }
+        }
+        
+        #lastwrap {
+            width: 100%;
+            height: 600px;
+            background-color: #FFEC40;
+        }
+        .lastcontainer {
+            width: 1260px;
+            height: 600px;
+            margin: 0 auto;
+        }
+        .lastcontainer h1 {
+            font-weight: bold;
+            font-size: 90px;
+            color: #86BEE7;
+            padding-top: 30px;
+            text-align: center;
+            line-height: 1.5;
+            font-family: 'Poppins', Italic;
+        }
+
+        .lastcontainer h1 span {
+        animation: changingText 4s infinite;
+        font-family: 'Poppins', Italic;
+        font-weight: 200;
+        }
+        .scroll-arrow {
+        position: fixed;
+        bottom: 30px; /* 원하는 위치로 조정 */
+        width: 40px; /* 화살표 너비 */
+        height: 40px; /* 화살표 높이 */
+        background-image: url("../../assets/img/hwa.png"); /* 화살표 이미지 경로 */
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 9999; /* 화살표가 다른 요소 위에 표시되도록 설정 */
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: default;
+        }
+        ..main-heading {
+            display: block;
+            font-size: 50px;
+        }
+        /* 애니메이션 효과 추가 */
+        .scroll-arrow {
+        animation: scrollAnimation 1s infinite alternate;
+        }
+
+        @keyframes scrollAnimation {
+        0% {
+            transform: translateY(0); /* 초기 위치 */
+        }
+        100% {
+            transform: translateY(10px); /* 이동할 거리 */
+        }
+        }
+
+        @keyframes textAnimation {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .main-heading .animated-text {
+            opacity: 0;
+            animation: textAnimation 1s ease-in-out forwards infinite;
+            animation-delay: 1s;
+        }
 
     </style>
 </head>
 <body>
     <?php include "../include/header.php"?>
     <main id="main" >
+        <div id="lastwrap">
+            <div class="lastcontainer">
+                <h1>LET'S LEARN <br>ABOUT <br> <span id="changing-text" style="font-weight: 100;"></span> <br> TOGETHER</h1>
+            </div>
+        </div>
+        <a href="#section2" class="scroll-arrow"></a>
         <div class="category_wrap">
             <div class="container">
                 <div class="content">
                     <h3>어떤 부분을 자세히 알고싶은가요 ?</h3>
                     <div class="content__inner">
-                        <div data-target="div1">
-                            <a>
+                        <div class="card" data-target="div1">
+                            <a href="#">
                                 <img src="../../assets/img/content01.svg" alt="눈">
                                 <p>눈</p>
                             </a>
                         </div>
-                        <div data-target="div1">
+                        <div class="card" data-target="div1">
                             <a href="#">
                                 <img src="../../assets/img/content02.svg" alt="간">
                                 <p>간</p>
                             </a>
                         </div>
-                        <div data-target="div1">
+                        <div class="card" data-target="div1">
                             <a href="#">
                                 <img src="../../assets/img/content03.svg" alt="뼈">
                                 <p>뼈</p>
                             </a>
                         </div>
-                        <div data-target="div1">
+                        <div class="card" data-target="div1">
                             <a href="#">
                                 <img src="../../assets/img/content04.svg" alt="임산부">
                                 <p>임산부</p>
                             </a>
                         </div>
-                        <div data-target="div1">
+                        <div class="card" data-target="div1">
                             <a href="#">
                                 <img src="../../assets/img/content05.svg" alt="스트레스">
                                 <p>스트레스</p>
                             </a>
                         </div>
-                        <div data-target="div1">
+                        <div class="card" data-target="div1">
                             <a href="#">
                                 <img src="../../assets/img/content06.svg" alt="피부">
                                 <p>피부</p>
                             </a>
                         </div>
-                        <div data-target="div1">
+                        <div class="card" data-target="div1">
                             <a href="#">
                                 <img src="../../assets/img/content07.svg" alt="혈액순환">
                                 <p>혈액순환</p>
                             </a>
                         </div>
-                        <div data-target="div1">
+                        <div class="card" data-target="div1">
                             <a href="#">
                                 <img src="../../assets/img/content08.svg" alt="소화기능">
                                 <p>소화기능</p>
                             </a>
                         </div>
-                        <div data-target="div1">
+                        <div class="card" data-target="div1">
                             <a href="#">
                                 <img src="../../assets/img/content09.svg" alt="호흡기능">
                                 <p>호흡기능</p>
                             </a>
                         </div>
-                        <div data-target="div1">
+                        <div class="card" data-target="div1">
                             <a href="#">
                                 <img src="../../assets/img/content10.svg" alt="갱년기">
                                 <p>갱년기</p>
@@ -314,7 +411,7 @@
                 </div>
             </div>
         </div>
-
+       
     </main>
     <?php include "../include/footer.php"?>
     <div id="modal">
@@ -322,6 +419,108 @@
             
         </div>
     </div>
+    <script>
+        const animatedHeadings = document.querySelectorAll('.main-heading');
+
+        animatedHeadings.forEach((animatedHeading) => {
+        const text = animatedHeading.innerText;
+        const words = text.split(' ');
+
+        animatedHeading.innerHTML = '';
+
+        words.forEach((word) => {
+            const wordElement = document.createElement('span');
+            wordElement.className = 'animated-text';
+            wordElement.innerText = word;
+            animatedHeading.appendChild(wordElement);
+        });
+
+        const animatedTexts = animatedHeading.querySelectorAll('.animated-text');
+
+        animatedTexts.forEach((text, index) => {
+            const delay = index * 400;
+            text.style.animationDelay = `${delay}ms`;
+        });
+        });
+    </script>
+    <script>
+       // 스크롤 화살표 클릭 시 조금씩 스크롤 내리기
+    document.addEventListener("DOMContentLoaded", function() {
+        var scrollArrow = document.querySelector(".scroll-arrow");
+        var scrollStep = 600; // 스크롤 단계 크기 (조정 가능)
+        var scrolling = false;
+
+        function scrollStepByStep() {
+            var currentScrollPosition = window.pageYOffset;
+            var targetScrollPosition = currentScrollPosition + scrollStep;
+
+            if (targetScrollPosition >= document.documentElement.scrollHeight) {
+                window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+                scrolling = false;
+                return;
+            }
+
+            window.scrollTo({ top: targetScrollPosition, behavior: 'smooth' });
+
+            if (scrolling) {
+                requestAnimationFrame(scrollStepByStep);
+            }
+        }
+
+        scrollArrow.addEventListener("mousedown", function(e) {
+            e.preventDefault();
+            scrolling = true;
+            scrollStepByStep();
+        });
+
+        scrollArrow.addEventListener("mouseup", function() {
+            scrolling = false;
+        });
+
+        window.addEventListener("scroll", function() {
+            if (scrolling) {
+                scrolling = false;
+            }
+        });
+    });
+    </script>
+    <script>
+        
+        const textElement = document.getElementById('changing-text');
+        const texts = ['Health' , 'Exercise ', 'Nutrition' , 'body' ,'Diet ', 'Vitamins ', 'Vegetables',];
+        
+        let currentIndex = 0;
+        
+        function changeText() {
+            const currentText = texts[currentIndex];
+            let newText = '';
+            let eraseInterval = 100;
+            let writeInterval = 100;
+
+            let eraseTimer = setInterval(() => {
+                newText = currentText.substring(0, newText.length -1);
+                textElement.textContent = newText;
+
+                if(newText === '') {
+                    clearInterval(eraseTimer);
+
+                    let writeTimer = setInterval(() => {
+                        newText = currentText.substring(0, newText.length + 1);
+                        textElement.textContent = newText;
+
+                        if(newText === currentText) {
+                            clearInterval(writeTimer);
+                        }
+                    },writeInterval);
+                }
+            }, eraseInterval);
+
+            currentIndex = (currentIndex + 1) % texts.length;
+        }
+
+        setInterval(changeText, 1000);
+    </script>
+
     <script>
         const list_show = document.querySelector(".list_show");
         const river = document.querySelector(".river");
@@ -337,9 +536,11 @@
         document.addEventListener("DOMContentLoaded", ()=> {
             const urlParams = new URLSearchParams(window.location.search);
             const category = urlParams.get('category');
+
             if (category) {
                 data(category);
                 const targetElement = document.querySelector(".list");
+
                 const scrollToTarget = () => {
                 const windowHeight = window.innerHeight;
                 const targetOffset = targetElement.getBoundingClientRect().top;
@@ -499,19 +700,16 @@
         function modal(){
             const image = document.querySelector(".c3 img");
             const modal = document.querySelector("#modal");
-            const a = document.querySelectorAll (".list_desc a");
+            const a1 = document.querySelectorAll (".list_desc a");
             const body = document.querySelector("body");
-
-            a.forEach((el) => {
-                el.addEventListener("click", () => {
-                    modal.style.display = "block";
-                    body.classList.add("modal-open");
-                })
+            a1.forEach((el) => {
+                modal.style.display = "block";
+                body.classList.add("modal-open");
             })
-                image.addEventListener("click", function(){
-                    modal.style.display = "none";
-                    body.classList.remove("modal-open");
-                })
+            image.addEventListener("click", function(){
+                modal.style.display = "none";
+                body.classList.remove("modal-open");
+            })
         }
         
     </script>

@@ -1,8 +1,6 @@
 <header id="header">
     <div class="container">
-        <a href="../main/main.php">
-        <img src="../../assets/img/logo.png" alt="로고이미지">
-        </a>
+        <a href="../main/main.php"><img src="../../assets/img/logo.png" alt="로고이미지"></a>
         <ul>
             <li><a href="../cate/cate.php">카테고리</a></li>
             <li><a href="../board/board.php">요리방</a></li>

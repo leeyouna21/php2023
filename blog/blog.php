@@ -5,6 +5,17 @@
     echo "<pre>";
     var_dump($_SESSION);
     echo "</pre>";
+
+    //블로그 뷰 + 1 
+    // $sql = "UPDATE blog SET blogView = blogView + 1 WHERE blogID = {$blogID}";
+    // $connect -> query($sql);
+
+    // $blogsql = "SELECT * FROM blog WHERE blogID = '$blogID'";
+    // $blogResult = $connect -> query($blogsql);
+    // $blogInfo = $blogResult -> fetch_array(MYSQLI_ASSOC);
+
+    // $commentsql = "SELECT * FROM blogComment WHERE blogID = '$blogID' AND "
+    // $commentResult = $connect -> query($commentsql);
 ?>
 <!DOCTYPE html>
 <html lang="ko">

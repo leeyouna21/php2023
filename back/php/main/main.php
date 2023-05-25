@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/maincate.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
     <title>Only For You</title>
@@ -60,61 +61,61 @@
             <div class="content">
                 <h3>어떤 부분을 자세히 알고싶은가요 ?</h3>
                 <div class="content__inner">
-                    <div>
+                    <div class="card">
                         <a href="#">
                             <img src="../../assets/img/content01.svg" alt="eye">
                             <p>눈</p>
                         </a>
                     </div>
-                    <div>
+                    <div class="card">
                         <a href="#">
                             <img src="../../assets/img/content02.svg" alt="river">
                             <p>간</p>
                         </a>
                     </div>
-                    <div>
+                    <div class="card">
                         <a href="#">
                             <img src="../../assets/img/content03.svg" alt="born">
                             <p>뼈</p>
                         </a>
                     </div>
-                    <div>
+                    <div class="card">
                         <a href="#">
                             <img src="../../assets/img/content04.svg" alt="pregnant">
                             <p>임산부</p>
                         </a>
                     </div>
-                    <div>
+                    <div class="card">
                         <a href="#">
                             <img src="../../assets/img/content05.svg" alt="stress">
                             <p>스트레스</p>
                         </a>
                     </div>
-                    <div>
+                    <div class="card">
                         <a href="#">
                             <img src="../../assets/img/content06.svg" alt="skin">
                             <p>피부</p>
                         </a>
                     </div>
-                    <div>
+                    <div class="card">
                         <a href="#">
                             <img src="../../assets/img/content07.svg" alt="blood">
                             <p>혈액순환</p>
                         </a>
                     </div>
-                    <div>
+                    <div class="card">
                         <a href="#">
                             <img src="../../assets/img/content08.svg" alt="digestive">
                             <p>소화기능</p>
                         </a>
                     </div>
-                    <div>
+                    <div class="card">
                         <a href="#">
                             <img src="../../assets/img/content09.svg" alt="Breathing">
                             <p>호흡기능</p>
                         </a>
                     </div>
-                    <div>
+                    <div class="card">
                         <a href="#">
                             <img src="../../assets/img/content10.svg" alt="climacterium">
                             <p>갱년기</p>

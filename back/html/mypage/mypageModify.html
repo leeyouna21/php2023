@@ -9,18 +9,24 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/style.css">
     <style>
-        
+        #header {
+            font-family: 'SBAggro';
+        }
         .join__inner input {
             box-sizing: border-box;
+            font-family: 'SBAggro';
+
         }
         .join__form button {
             float: right;
             text-align: center;
             margin-left: 15px;
-            background-color: #EBFFB3;
+            background-color: #ffad7f;
             padding: 15px 35px;
             border-radius: 10px;
             font-weight: 500;
+            font-family: 'SBAggro';
+
         }
         .join__inner .title {
             font-size: 30px;
@@ -34,6 +40,7 @@
             font-weight: 400;
             color: #dfdfdf;
             cursor: pointer;
+            font-family: 'SBAggro';
         }
         .file_img {
             width: 200px; 
@@ -41,6 +48,7 @@
             display: block; 
             margin: auto;
             cursor: pointer;
+            
         }
         .file_img_desc {
             display: block;
@@ -49,7 +57,8 @@
             padding: 5px 10px;
             border-radius: 10px;
             cursor: pointer;
-            background-color: #EBFFB3;
+            font-family: 'SBAggro';
+            color: #747474;
         }
         .name_nick .name{
             width: 100%;
@@ -90,6 +99,7 @@
             height: 50px;
             border: 0;
             font-weight: 300;
+            color: #585858;
         }
         .mypage_font {
             margin-bottom: 5px;
@@ -251,7 +261,7 @@
             <h2 class="title">마이페이지(회원정보수정)</h2>
             <form action="mypageImgeUpload.php" method="POST"></form>
                 <label for="file-input">
-                    <img id="preview-image" src="../../assets/img/User.png" alt="이미지" class="file_img">
+                    <img id="preview-image" src="../../assets/img/victory.png" alt="이미지" class="file_img">
                 </label>
                 <input type="file" id="file-input" style="display: none;" onchange="previewFile(event)">
                 <button type="submit" class="file_img_desc">이미지 변경</button>              
@@ -262,7 +272,7 @@
                         <div class="name_nick">
                             <div class="name mb30">
                                 <h2 class="title mypage_font">이름</h2>
-                                <div class="desc inputStyle5" style="box-sizing:border-box">이름넣을곳</div>
+                                <div class="desc inputStyle5" style="box-sizing:border-box">이유나</div>
                                 <p class="nickcommet">*아이디는 수정이 불가능 합니다.</p>
                             </div>
                             <form action="mypageNickUpload.php" method="POST" class="nick">
@@ -277,7 +287,7 @@
                         </div>
                         <div class="you">
                             <h2 class="title mypage_font">아이디</h2>
-                            <div class="desc inputStyle5" style="box-sizing:border-box;">이름넣을곳</div>
+                            <div class="desc inputStyle5" style="box-sizing:border-box;">onlyforyou</div>
                         </div>
                         <form action="mypagePassUpload.php" method="post" class="mb30">
                             <div class="mb30">
@@ -288,7 +298,7 @@
                             <div>
                                 <label for="youPassC" class="required">비밀번호 확인</label>
                                 <div class="pass_wrap">
-                                    <input type="password" id="youPassC" name="youPassC" placeholder="비밀번호를 다시한번 입력해주세요." class="inputStyle5 pl" required>
+                                    <input type="password" id="youPassC" name="youPassC" placeholder="비밀번호를 다시 한 번 입력해주세요." class="inputStyle5 pl" required>
                                     <button type="submit">비밀번호 변경</button>
                                 </div>
                                 <p class="msg" id="youPassCComment"><!--비밀번호가 일치하지 않습니다.--></p>
@@ -296,7 +306,7 @@
                         </form>
                         <div class="you">
                             <h2 class="title mypage_font">이메일</h2>
-                            <div class="desc inputStyle5" style="box-sizing:border-box;">이메일넣을곳</div>
+                            <div class="desc inputStyle5" style="box-sizing:border-box;">only@for.you</div>
                         </div>
                         <div class="phone">
                             <label for="youPhone" class="required">연락처</label>
@@ -323,7 +333,7 @@
                             </form>
                             <div class="gender">
                                 <h2 class="title mypage_font">성별</h2>
-                                <div class="desc inputStyle5" style="box-sizing:border-box">성별넣을곳</div>
+                                <div class="desc inputStyle5" style="box-sizing:border-box">MAN</div>
                                 <p class="nickcommet">*성별은 수정이 불가능 합니다.</p>
                             </div>
                         </div>
@@ -341,25 +351,27 @@
             </div>
             <div class="footcont">
                 <ul>
-                    <li><a href="#">회사소개</a></li>
-                    <li><a href="#">고객센터</a></li>
-                    <li><a href="#">이용약관</a></li>
-                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
                 </ul>
                 <ul>
-                    <li>주식회사 온리포유</li>
-                    <li>사업자 등록번호 : 00 - 00 - 0000</li>
-                    <li>대표 : 이유나</li>
+                    <li>ONLYFORYOU</li>
+                    <li>BRN : 00 - 00 - 0000</li>
+                    <li>Representative : people</li>
                 </ul>
                 <ul>
-                    <li>대표번호 : 1588-0000</li>
-                    <li>이메일 : only@for.you</li>
-                    <li>주소 : 대한민국</li>
+                    <li>call : 1588-0000</li>
+                    <li>email : only@for.you</li>
+                    <li>Address : ansan </li>
                 </ul>
                 <strong>copyright &copy; 2023 onlyforyou Inc All right reserved</strong>
+
             </div>
         </div>
     </footer>
+
     <!-- footer -->
     <script>
         function previewFile(event) {

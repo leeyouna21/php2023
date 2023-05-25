@@ -76,6 +76,8 @@
     padding: 20px;
     box-sizing: border-box;
     font-weight: normal;
+    color: #4b4b4b;
+    padding-top: 15px;
 }
 .login_form .button {
     display: block;
@@ -124,7 +126,7 @@
     height: 6vh;
     display: block;
     width: 20%;
-    background-color: #EBFFB3B2;
+    background-color: #ffad7f;
     text-align: center;
     line-height: 6vh;
     border-radius: 10px;

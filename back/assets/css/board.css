@@ -1,4 +1,7 @@
 /* boardWrite */
+#main {
+    font-family: 'SBAggro';
+}
 .boardW__inner {
     margin-top: 200px;
 }

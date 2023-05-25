@@ -1,69 +1,130 @@
+<?php
+    include "../connect/connect.php";
+    include "../connect/session.php";
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/css/style.css">
+<?php include "../include/head.php"; ?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
     <title>요리방 보기</title>
 
 </head>
 <body>
-    <?php
-        include "../include/header.php";
-    ?>
+    <?php include "../include/header.php" ?>
     <main id="main" class="aggro">
         <div class="boardV__inner">
             <div class="container">
                 <h1>맛있는 우리네 레시피</h1>
                 <div class="boardV__wrap">
-                    <h2>당근스프 레시피 공유합니다 !</h2>
+<?php
+    if(isset($_GET['boardID'])){
+        $boardID = $_GET['boardID'];
+
+        $check = "SELECT * FROM board WHERE boardID = '$boardID'";
+        $result = $connect -> query($check);
+        $checkcount = $result -> num_rows;
+        if($checkcount == 0){
+            echo "<script>alert('존재하지 않는 게시물입니다.'); window.history.back();</script>";
+        }
+
+        $sql = "UPDATE board SET boardView = boardView + 1 WHERE boardID = {$boardID}";
+        $connect -> query($sql);
+        // boardView 증가
+
+        $sql = "SELECT boardTitle, boardAuthor, regTime, boardView, boardName, boardIngre FROM board WHERE boardID = {$boardID}";
+        // 제목, 작성자, 작성시간, 조회수, 음식이름, 음식재료 불러오는 쿼리문
+        $contsql = "SELECT boardContents1, boardContents2, boardContents3, boardContents4, boardContents5 FROM board WHERE boardID = {$boardID}";
+        // 게시글 본문내용(boardContents)불러오는 쿼리문
+        $imgsql = "SELECT ImgSrc1, ImgSrc2, ImgSrc3, ImgSrc4, ImgSrc5 FROM board WHERE boardID = {$boardID}";
+        $result = $connect -> query($sql);
+        $contresult = $connect -> query($contsql);
+        $imgresult = $connect -> query($imgsql);
+
+        if ($contresult) {
+            $continfo = $contresult->fetch_array(MYSQLI_ASSOC);
+            $countcont = 0;
+            $boardContents = array(
+                $continfo['boardContents2'],
+                $continfo['boardContents3'],
+                $continfo['boardContents4'],
+                $continfo['boardContents5'],
+            );
+
+            foreach($continfo as $value){
+                if($value !== null) {
+                    $countcont++;
+                }
+            }
+            // echo $countcont;
+            // null이 아닌 contents 개수
+
+            // echo $continfo['boardContents1'], $continfo['boardContents2'], $continfo['boardContents3'], $continfo['boardContents4'], $continfo['boardContents5'];
+        }
+        
+        if ($result) {
+            $info = $result->fetch_array(MYSQLI_ASSOC);
+
+            // echo $info['boardTitle'], $info['boardAuthor'], $info['boardView'], $info['boardName'], $info['boardIngre'];
+        }
+
+        if($imgresult) {
+            $imginfo = $imgresult->fetch_array(MYSQLI_ASSOC);
+            $imgSrc = array(
+                $imginfo['ImgSrc2'],
+                $imginfo['ImgSrc3'],
+                $imginfo['ImgSrc4'],
+                $imginfo['ImgSrc5']
+            );
+            // echo var_dump($imgSrc);
+            // echo $imginfo['ImgSrc1'];
+        }
+    }
+?>
+                    <h2><?=$info['boardTitle']?></h2>
                     <div class="boardV__info">
-                        <span>작성자 아이디</span>
-                        <span>23.05.09 18:02</span>
-                        <span>조회수 1352</span>
+                        <span><?=$info['boardAuthor']?></span>
+                        <span><?=date('y. m. d',$info['regTime'])?></span>
+                        <span>조회수 <?=$info['boardView']?></span>
                     </div>
                     <h3>음식종류</h3>
                     <div class="board__contents">
-                        <h4>당근스프</h4>
+                        <h4><?=$info['boardName']?></h4>
                     </div>
                     <h3>재료</h3>
                     <div class="board__contents">
-                        <span>당근 2개, 양파 1개, 감자 1개, 채소스톡 또는 치킨스톡 3컵, 생크림 1/2컵, 올리브오일 1큰술, 소금약간, 후추 약간</span>
+                        <span><?=$info['boardIngre']?></span>
                     </div>
                     <div class="board__contents">
                         <div class="swiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="../../assets/img/boardview01.png" alt="업로드이미지">
-                                    <span>당근, 양파, 감자는 깨끗이 씻어서 껍질을 벗긴 후 1cm 크기로 송송 썰어줍니다.<br>
-                                        냄비에 올리브오일을 두르고 당근, 양파, 감자를 넣고 볶아줍니다.<br>
-                                        채소가 약간 노릇해질 때까지 볶아주다가 채소스톡 또는 치킨스톡을 넣고 끓입니다.<br>
-                                        채소가 완전히 익을 때까지 중불에서 끓입니다.<br>
-                                        끓인 스프에 소금과 후추로 간을 맞춘 후 블렌더를 이용해 곱게 갈아줍니다.<br>
-                                        갈아낸 스프에 생크림을 넣고 한번 더 끓입니다.
+<?php
+    if($imginfo['ImgSrc1'] !== null && $imginfo['ImgSrc1'] != ""){
+        echo "<img src='../img/board/".$imginfo['ImgSrc1']."' alt='업로드이미지'>";
+    } else {
+        echo "<img src='../img/board/default.png' alt='업로드이미지'>";
+    }
+?>
+                                    <span>
+                                        <?=$continfo['boardContents1']?>
                                     </span>
                                 </div>
-                                <div class="swiper-slide">
-                                    <img src="../../assets/img/boardview01.png" alt="업로드이미지">
-                                    <span>당근, 양파, 감자는 깨끗이 씻어서 껍질을 벗긴 후 1cm 크기로 송송 썰어줍니다.<br>
-                                        냄비에 올리브오일을 두르고 당근, 양파, 감자를 넣고 볶아줍니다.<br>
-                                        채소가 약간 노릇해질 때까지 볶아주다가 채소스톡 또는 치킨스톡을 넣고 끓입니다.<br>
-                                        채소가 완전히 익을 때까지 중불에서 끓입니다.<br>
-                                        끓인 스프에 소금과 후추로 간을 맞춘 후 블렌더를 이용해 곱게 갈아줍니다.<br>
-                                        갈아낸 스프에 생크림을 넣고 한번 더 끓입니다.
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="../../assets/img/boardview01.png" alt="업로드이미지">
-                                    <span>당근, 양파, 감자는 깨끗이 씻어서 껍질을 벗긴 후 1cm 크기로 송송 썰어줍니다.<br>
-                                        냄비에 올리브오일을 두르고 당근, 양파, 감자를 넣고 볶아줍니다.<br>
-                                        채소가 약간 노릇해질 때까지 볶아주다가 채소스톡 또는 치킨스톡을 넣고 끓입니다.<br>
-                                        채소가 완전히 익을 때까지 중불에서 끓입니다.<br>
-                                        끓인 스프에 소금과 후추로 간을 맞춘 후 블렌더를 이용해 곱게 갈아줍니다.<br>
-                                        갈아낸 스프에 생크림을 넣고 한번 더 끓입니다.
-                                </div>
+<?php
+    if($countcont > 1){
+        for($i=0; $i<$countcont-1; $i++){
+            echo "<div class='swiper-slide'>";
+            if($imgSrc[$i] !== null && $imgSrc[$i] != ""){
+                echo "<img src='../img/board/".$imgSrc[$i]."' alt='업로드이미지'>";
+            } else {
+                echo "<img src='../img/board/default.png' alt='업로드이미지'>";
+            }
+            echo "<span>".$boardContents[$i]."</span>";
+            echo "</div>";
+        }
+    }
+?>
                             </div>
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
@@ -71,23 +132,20 @@
                     </div>
                 </div>
                 <div class="board_btn mb100">
-                    <a href="#" class="btnStyle4">삭제</a>
-                    <a href="#" class="btnStyle4">수정</a>
+                    <a href="boardRemove.php?boardID=<?=$_GET['boardID']?>" class="btnStyle4" onclick="return confirm('정말 삭제하시겠습니까?', '')">삭제</a>
+                    <a href="boardModify.php?boardID=<?=$_GET['boardID'] ?>" class="btnStyle4">수정</a>
                     <a href="board.html" class="btnStyle4">목록</a>
                 </div>
             </div>
         </div>
     </main>
-    <?php
-        include "../include/footer.php";
-    ?>
-
+    <?php include "../include/footer.php" ?>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
             // Optional parameters
             direction: 'horizontal',
-            loop: true,
+            loop: false,
 
             pagination: {
                 el: '.swiper-pagination',

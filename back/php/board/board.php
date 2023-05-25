@@ -1,18 +1,20 @@
+<?php
+    include "../connect/connect.php";
+    include "../connect/session.php";
+?>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <title>요리방</title>
+<?php include "../include/head.php"; ?>
+    <title>요리방 메인</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <style>
         /* board */
         .board {
-            margin-top: 150px;
+            margin-top: 100px;
             background-color: blanchedalmond;
             width: 100%;
             height: 500px;
@@ -47,6 +49,8 @@
             border: 0;
             border-radius: 10px; 
             padding: 0 30px;
+            font-family: SBAggro;
+            font-weight: lighter;
         }
         .board__inner button {
             position: relative;
@@ -70,14 +74,14 @@
         }
          /* content */
         .board_slider {
-            margin-top: 200px;
+            margin-top: 100px;
             min-height: 500px;
         }
         .board_slider .title {
             font-size: 50px;
             font-weight: 500;
             text-align: center;
-            margin-bottom: 70px;
+            /* margin-bottom: 70px; */
         }
         .content__inner {
             display: flex;
@@ -139,6 +143,7 @@
             border-bottom: 2px solid #000;
             text-align: center;
             width: 100%;
+            font-weight: 100;
         }
         .board_table table tr:hover{
             background-color: #efefef;
@@ -152,6 +157,12 @@
         .board_table table td {
             padding: 15px 5px;
             border-bottom: 1px solid #000;
+        }
+        .board_table table td span {
+            font-weight: 500;
+        }
+        .board_table table td h4 {
+            font-weight: 100;
         }
         .board_table table td a {
             text-align: left;
@@ -192,6 +203,7 @@
         }
         .board_pages ul li a:hover{
             background-color: #efefef;
+            color: #000;
         }
         .board_view {
             margin-top: 40px;
@@ -234,13 +246,148 @@
             float: right;
             margin-top: 10px;
         }
+        .board__name {
+            background-color: #FFEBCD;
+            padding: 2px 7px;
+            border-radius: 20px;
+        }
+        #viwrap{
+            width: 100%;
+            height: 700px;
+            background-color: #ffae7f96;
+            margin-top: 50px;
+        }
+        .vicontainer {
+            width: 1217px;
+            height: 460px;
+            margin: 0 auto;
+            background-color: #ffffff56;
+            border-radius: 20px;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+            margin-top: 30px;
+            display: flex;
+        }
+        .vaside {
+            width: 550px;
+            height: 397px;
+            margin-left: 50px;
+            margin-top: 30px;
+        }
+        .vaside h1 {
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .vaside h3 {
+            font-size: 25px;
+            text-align: center;
+            padding-top: 30px;
+        }
+        .vaside p {
+            font-size: 16px;
+            font-weight: lighter;
+            color: #666;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .vaside h4 {
+            font-size: 18px;
+            font-weight: lighter;
+            text-align: center;
+            padding-top: 80px;
+        }
+        .vcontent {
+            width: 566px;
+            height: 397px;
+            background-color: #ffe1a075;
+            margin-right: 50px;
+            margin-top: 30px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .vcontent img {
+            max-width: 200%;
+            max-height: 200%;
+            cursor: pointer;
+        }
+        .vi1  {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap
+        }
+        .vi1 h1 {
+            font-size: 60px;
+            text-align: center;
+            padding-top: 80px;
+        }
+        .vi1 .left-image {
+            margin-right: 10px;
+            width: 100px;
+            height: 100px;
+            margin-top: 70px;
+        }
+        .vi1 .right-image {
+            margin-left: 10px;
+            margin-top: 70px;
+            width: 100px;
+            height: 100px;
+        }
+        .boardtable__contents {
+            overflow: hidden;
+            word-wrap: break-word;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotateY(0deg);
+        }
+            100% {
+                transform: rotateY(720deg);
+        }
+        }
+
+        .vi1 img {
+            animation: rotate 2s linear infinite;
+        }
     </style>
 </head>
 <body>
-    <?php
-        include "../include/header.php";
-    ?>
-    <main id="main">
+    <?php include "../include/header.php" ?>
+    <main id="main" class="aggro">
+        <div id="viwrap">
+            <div class="vi1">
+                <img src="../../assets/img/victory.png" alt="" class="left-image"> 
+                <h1>요리방 상금 백만 원의 주인공</h1>
+                <img src="../../assets/img/victory.png" alt="" class="right-image">
+            </div>
+            <div class="vicontainer">
+                <div class="vaside">
+<?php
+    $sql = "SELECT * FROM board ORDER BY boardView DESC LIMIT 1";
+    $result = $connect -> query($sql);
+
+    $info = $result -> fetch_array(MYSQLI_ASSOC);
+    // echo "<pre>";
+    // echo var_dump($info);
+    // echo "</pre>";
+?>
+                    <h3>🍒 맛있는 우리네 레시피 🍒</h3>
+                    <h1><?=$info['boardTitle']?></h1>
+                    <p><?=$info['boardAuthor']?>님  |  <?=date('y. m. d', $info['regTime'])?> |  조회수 <?=$info['boardView']?></p>
+                    <h4>언제든지 레시피를 올려보세요. <br> 여러분의 이야기가 많은 분들께 도움이 됩니다 !</h4>
+                </div>
+                <div class="vcontent">
+                    <a href="boardView.php?boardID=<?=$info['boardID']?>"><img src="../img/board/<?=$info['ImgSrc1']?>" alt="게시판 첫 번째 이미지"></a>
+                </div>
+            </div>
+        </div>
         <div class="board_slider">
             <div class="container">
                 <h2 class="title">많이 찾고 있는 레시피</h2>
@@ -369,9 +516,9 @@
                     <h2>최근레시피 목록</h2>
                     <a href="boardWrite.php" class="btnStyle3">글쓰기</a>
                 </div>
-                <table>
+                <table class="aggro">
                     <colgroup>
-                        <col style="width: 5%; padding-right: 20px;">
+                        <col style="width: 15%;">
                         <col>
                         <col style="width: 10%;">
                         <col style="width: 15%;">
@@ -387,10 +534,50 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>7</td>
+<?php
+    if(isset($_GET['page'])){
+        $page = (int)$_GET['page'];
+    } else {
+        $page = 1;
+    }
+
+    $viewNum = 10;
+    $viewLimit = ($viewNum * $page) - $viewNum;
+
+    $sql = "SELECT boardID, boardName, boardAuthor, boardTitle, boardView, boardContents1, regTime FROM board ORDER BY boardID DESC LIMIT {$viewLimit}, {$viewNum}";
+    $result = $connect -> query($sql);
+
+    if($result){
+        $count = $result -> num_rows;
+        // echo $count;
+
+        if($count > 0){
+            for($i=0; $i<$count; $i++){
+                $info = $result -> fetch_array(MYSQLI_ASSOC);
+
+                echo "<tr>";
+                echo "<td>";
+                echo "<span>".$info['boardID']."</span>";
+                echo "<h4 class='board__name'>".$info['boardName']."</h4>";
+                echo "</td>";
+                echo "<td>";
+                echo "<a href='boardView.php?boardID={$info['boardID']}'>".$info['boardTitle']."</a>";
+                echo "<p class='boardtable__contents'>".$info['boardContents1']."</p>";
+                echo "</td>";
+                echo "<td>".$info['boardAuthor']."</td>";
+                echo "<td>".date('y. m. d', $info['regTime'])."</td>";
+                echo "<td>".$info['boardView']."</td>";
+            }
+        }
+    }
+?>
+                        <!-- <tr>
                             <td>
-                                <a href="boardView.html" ">달래를 이용해 요리를 해보았어요.</a>
+                                <span>10</span>
+                                <h4 class="board__name">당근스프</h4>
+                            </td>
+                            <td>
+                                <a href="boardView.html">달래를 이용해 요리를 해보았어요.</a>
                                 <p>요즘에 자주 해먹는 달래를 재료로 달래무침을 만들어 보았습니다. <br>역시 재철이라 그런지 향기도 너무 좋고 봄이 온 느낌도 들어서 너무 맛있게 ...</p>
                             </td>
                             <td>홍길동</td>
@@ -400,7 +587,7 @@
                         <tr>
                             <td>6</td>
                             <td>
-                                <a href="boardView.html" ">달래를 이용해 요리를 해보았어요.</a>
+                                <a href="boardView.html">달래를 이용해 요리를 해보았어요.</a>
                                 <p>요즘에 자주 해먹는 달래를 재료로 달래무침을 만들어 보았습니다. <br>역시 재철이라 그런지 향기도 너무 좋고 봄이 온 느낌도 들어서 너무 맛있게 ...</p>
                             </td>
                             <td>홍길동</td>
@@ -409,7 +596,7 @@
                         </tr><tr>
                             <td>5</td>
                             <td>
-                                <a href="boardView.html" ">달래를 이용해 요리를 해보았어요.</a>
+                                <a href="boardView.html">달래를 이용해 요리를 해보았어요.</a>
                                 <p>요즘에 자주 해먹는 달래를 재료로 달래무침을 만들어 보았습니다. <br>역시 재철이라 그런지 향기도 너무 좋고 봄이 온 느낌도 들어서 너무 맛있게 ...</p>
                             </td>
                             <td>홍길동</td>
@@ -418,7 +605,7 @@
                         </tr><tr>
                             <td>4</td>
                             <td>
-                                <a href="boardView.html" ">달래를 이용해 요리를 해보았어요.</a>
+                                <a href="boardView.html">달래를 이용해 요리를 해보았어요.</a>
                                 <p>요즘에 자주 해먹는 달래를 재료로 달래무침을 만들어 보았습니다. <br>역시 재철이라 그런지 향기도 너무 좋고 봄이 온 느낌도 들어서 너무 맛있게 ...</p>
                             </td>
                             <td>홍길동</td>
@@ -427,7 +614,7 @@
                         </tr><tr>
                             <td>3</td>
                             <td>
-                                <a href="boardView.html" ">달래를 이용해 요리를 해보았어요.</a>
+                                <a href="boardView.html">달래를 이용해 요리를 해보았어요.</a>
                                 <p>요즘에 자주 해먹는 달래를 재료로 달래무침을 만들어 보았습니다. <br>역시 재철이라 그런지 향기도 너무 좋고 봄이 온 느낌도 들어서 너무 맛있게 ...</p>
                             </td>
                             <td>홍길동</td>
@@ -436,7 +623,7 @@
                         </tr><tr>
                             <td>2</td>
                             <td>
-                                <a href="boardView.html" ">달래를 이용해 요리를 해보았어요.</a>
+                                <a href="boardView.html">달래를 이용해 요리를 해보았어요.</a>
                                 <p>요즘에 자주 해먹는 달래를 재료로 달래무침을 만들어 보았습니다. <br>역시 재철이라 그런지 향기도 너무 좋고 봄이 온 느낌도 들어서 너무 맛있게 ...</p>
                             </td>
                             <td>홍길동</td>
@@ -445,20 +632,65 @@
                         </tr><tr>
                             <td>1</td>
                             <td>
-                                <a href="boardView.html" ">달래를 이용해 요리를 해보았어요.</a>
+                                <a href="boardView.html">달래를 이용해 요리를 해보았어요.</a>
                                 <p>요즘에 자주 해먹는 달래를 재료로 달래무침을 만들어 보았습니다. <br>역시 재철이라 그런지 향기도 너무 좋고 봄이 온 느낌도 들어서 너무 맛있게 ...</p>
                             </td>
                             <td>홍길동</td>
                             <td>2023-05-08</td>
                             <td>100</td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
         </div>
         <div class="board_pages">
             <ul>
-                <li><a href="#">처음으로</a></li>
+<?php
+    // 게시글의 총 개수 + 나오는 페이지 수 -> 둘 다 알아야함
+
+    $sql = "SELECT count(boardID) FROM board";
+    $result = $connect -> query($sql);
+
+    $boardTotalCount = $result -> fetch_array(MYSQLI_ASSOC);
+    $boardTotalCount = $boardTotalCount['count(boardID)'];
+
+    //총 페이지 개수
+    $boardTotalCount = ceil($boardTotalCount/$viewNum);
+    
+    $pageView = 4;
+    $startPage = $page - $pageView;
+    $endPage = $page + $pageView;
+
+    // 처음 페이지 초기화
+    if($startPage < 1) $startPage = 1;
+
+    // 마지막 페이지 초기화
+    if($endPage >= $boardTotalCount) $endPage = $boardTotalCount;
+
+    // 처음으로, 이전페이지
+    if($page > 1 && $page <= $boardTotalCount){
+        $prev = $page - 1;
+        echo "<li><a href='board.php?page=1'>처음으로</a></li>";
+        echo "<li><a href='board.php?page={$prev}'>이전</a></li>";
+    }
+
+    // 페이지
+    for($i=$startPage; $i<=$endPage; $i++){
+        if($page >0 && $page <= $boardTotalCount){
+            $active = "";
+            if($i == $page) $active = "active";
+            echo "<li class='{$active}'><a href='board.php?page={$i}'>{$i}</a></li>";
+        }
+    }
+
+    // 다음페이지, 마지막페이지
+    if($page > 0 && $page < $boardTotalCount){
+        $next = $page + 1;
+        echo "<li><a href='board.php?page={$next}'>다음</a></li>";
+        echo "<li><a href='board.php?page={$boardTotalCount}'>마지막으로</a></li>";
+    }
+?>
+                <!-- <li><a href="#">처음으로</a></li>
                 <li><a href="#">이전으로</a></li>
                 <li class="active"><a href="#">1</a></li>
                 <li><a href="#">2</a></li>
@@ -469,14 +701,12 @@
                 <li><a href="#">7</a></li>
                 <li><a href="#">8</a></li>
                 <li><a href="#">다음</a></li>
-                <li><a href="#">마지막으로</a></li>
+                <li><a href="#">마지막으로</a></li> -->
             </ul>
         </div>
     </main>
     <!-- main -->
-    <?php
-        include "../include/footer.php";
-    ?>
+    <?php include "../include/footer.php" ?>
 
     <script>
         const swiper = new Swiper('.swiper', {

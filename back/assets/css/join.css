@@ -49,6 +49,8 @@ fieldset > div {
     border: 0;
     font-size: 0.8rem;
     font-weight: 300;
+    font-family: 'SBAggro';
+
 }
 .join__form .age__wrap .youage {
     width: 300px;

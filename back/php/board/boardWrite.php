@@ -10,14 +10,16 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+<?php include "../include/head.php"; ?>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
-    <title>Only For You</title>
-
+    <style>
+        form input::file-selector-button {
+            display: none;
+            align-items: flex-end;
+        }
+    </style>
+    <title>요리방 작성</title>
 </head>
 <body>
     <?php include "../include/header.php" ?>
@@ -26,7 +28,7 @@
             <div class="boardW__inner mb100">
                 <h1>요리방 공유 레시피 작성하기</h1>
                 <div class="boardW__write">
-                    <form action="boardWrite.php" name="boardWrite" method="post">
+                    <form action="boardWriteSave.php" name="boardWrite" method="post" enctype="multipart/form-data">
                         <fieldset class="field1">
                             <legend class="blind">게시글 작성하기</legend>
                             <div>
@@ -39,16 +41,16 @@
                             </div>
                             <div>
                                 <label for="boardIngre">재료</label>
-                                <input type="text" id="boardIngre" name="boardIngre" class="inputStyle" placeholder="요리에 필요한 재료를 입력해주세요.">
+                                <input type="text" id="boardIngre" name="boardIngre" class="inputStyle" placeholder="요리에 필요한 재료를 입력해주세요." required>
                             </div>
                             <div>
-                                <label for="boardImg" class="img__upload">사진 첨부하기</label>
-                                <input type="file" id="boardImg" name="boardImg" class="inputStyle2">
+                                <label for="boardImg1" class="img__upload">사진 첨부하기</label>
+                                <input type="file" id="boardImg1" name="boardImg1" class="inputStyle2" accept=".jpg, .jpeg, .png, .gif" placeholder="jpg, png, gif 파일만 가능합니다. 이미지 용량은 1MB를 넘길 수 없습니다.">
                                 <p>과정을 알 수 있는 사진이 있다면 올려주세요.</p>
                             </div>
                             <div>
-                                <label for="boardContents">레시피</label>
-                                <textarea name="boardContents" id="boardContents" rows="20" class="inputStyle" placeholder="구체적인 레시피의 내용을 적어주세요. 최대 다섯 장까지 가능합니다."></textarea>
+                                <label for="boardContents1">레시피</label>
+                                <textarea name="boardContents1" id="boardContents1" rows="20" class="inputStyle" placeholder="구체적인 레시피의 내용을 적어주세요. 최대 다섯 장까지 가능합니다." required></textarea>
                             </div>
                         </fieldset>
                         <div class="contents__addbox"></div>
@@ -94,7 +96,7 @@
                     </div>
                     <div>
                         <label for="boardContents${fieldsetCount}">레시피 -${fieldsetCount}단계</label>
-                        <textarea name="boardContents${fieldsetCount}" id="boardContents${fieldsetCount}" rows="20" class="inputStyle" placeholder="구체적인 레시피의 내용을 적어주세요. 최대 다섯 장까지 가능합니다."></textarea>
+                        <textarea name="boardContents${fieldsetCount}" id="boardContents${fieldsetCount}" rows="20" class="inputStyle" placeholder="구체적인 레시피의 내용을 적어주세요. 최대 다섯 장까지 가능합니다." required></textarea>
                     </div>
                 `
                 contentsAdd.appendChild(newFieldSet);

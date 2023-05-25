@@ -72,7 +72,7 @@ button{
     cursor: pointer;
 }
 .inputStyle5 {
-    background-color: #EBFFB3B2;
+    background-color: #c5c3c3;
     width: 100%;
     border-radius: 5px;
     padding: 15px !important;
@@ -81,6 +81,8 @@ button{
     border: 0;
     font-weight: 300;
     text-align:left;
+    font-family: 'SBAggro';
+
 }
 /* list style */
 .listStyle li {
